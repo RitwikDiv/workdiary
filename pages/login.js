@@ -25,7 +25,7 @@ export default function Login() {
 	const [email, setEmail] = useState('');
 	const [valid, setValid] = useState(true);
 	const [loading, setLoading] = useState(false);
-	const oauthList = [{ name: 'Github', icon: <Github /> }];
+	const oauthList = [{ name: 'Github', icon: <Github color='#211F1F' /> }];
 
 	const toast = useToast();
 
@@ -64,7 +64,7 @@ export default function Login() {
 		}
 	};
 
-	async function signInWithNotion(provider) {
+	async function oauthLogin(provider) {
 		const { user, session, error } = await supabase.auth.signIn({
 			provider: provider,
 		});
@@ -145,7 +145,7 @@ export default function Login() {
 									key={oauth.name}
 									variant='outline'
 									color={'gray.600'}
-									onClick={() => signInWithNotion(oauth.name.toLowerCase())}
+									onClick={() => oauthLogin(oauth.name.toLowerCase())}
 									leftIcon={oauth.icon}>
 									Continue with {oauth.name}
 								</Button>
