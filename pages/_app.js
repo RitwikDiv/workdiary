@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { theme } from '../styles/theme';
 import { supabase } from '../utils/backend/supabaseClient';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
 	const router = useRouter();
@@ -29,9 +30,14 @@ function MyApp({ Component, pageProps }) {
 	}
 
 	return (
-		<ChakraProvider theme={theme}>
-			<Component {...pageProps} />
-		</ChakraProvider>
+		<>
+			<Head>
+				<meta charSet='UTF-8' />
+			</Head>
+			<ChakraProvider theme={theme}>
+				<Component {...pageProps} />
+			</ChakraProvider>
+		</>
 	);
 }
 

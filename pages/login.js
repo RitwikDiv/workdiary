@@ -12,6 +12,7 @@ import {
 	Stack,
 	Text,
 	VStack,
+	Image,
 	useToast,
 } from '@chakra-ui/react';
 import Head from 'next/head';
@@ -98,14 +99,18 @@ export default function Login() {
 	return (
 		<>
 			<Head>
-				<meta charset='UTF-8' />
 				<title>Login | WorkDiary</title>
 			</Head>
 			<Container centerContent>
-				<Center height={'100vh'} width={'100vw'} backgroundColor={'#fffcf7'}>
+				<Center height={'100vh'} width={'100vw'}>
 					<Stack spacing={4} width='350px'>
 						<VStack spacing={2}>
-							<Text as='h1' fontSize='xl' fontWeight='bold'>
+							<Image
+								src='logo.svg'
+								color='orange'
+								htmlHeight={'100px'}
+								htmlWidth='100px'></Image>
+							<Text as='h1' fontSize='2xl' fontWeight='bold'>
 								👋 Welcome to Workdiary
 							</Text>
 							<Text

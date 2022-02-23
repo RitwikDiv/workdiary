@@ -19,7 +19,7 @@ export default function NotFound() {
 				<title>404: Not Found | WorkDiary</title>
 			</Head>
 			<Container centerContent>
-				<Center height={'100vh'} width={'100vw'} backgroundColor={'#fffcf7'}>
+				<Center height={'100vh'} width={'100vw'}>
 					<Stack spacing={4} width='350px' align={'stretch'}>
 						<Center>
 							<Image
@@ -29,8 +29,8 @@ export default function NotFound() {
 								htmlWidth={'200px'}></Image>
 						</Center>
 						<VStack spacing={2}>
-							<Text as='h1' fontSize='xl' fontWeight='extrabold'>
-								👀 Oops, are you lost?
+							<Text as='h1' fontSize='2xl' fontWeight='extrabold'>
+								Oops, are you lost?
 							</Text>
 							<Text
 								as='p'
