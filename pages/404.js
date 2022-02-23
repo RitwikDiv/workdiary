@@ -30,7 +30,7 @@ export default function NotFound() {
 						</Center>
 						<VStack spacing={2}>
 							<Text as='h1' fontSize='2xl' fontWeight='extrabold'>
-								👀 Oops, are you lost?
+								Oops, are you lost?
 							</Text>
 							<Text
 								as='p'
