@@ -29,7 +29,7 @@ export default function NotFound() {
 								htmlWidth={'200px'}></Image>
 						</Center>
 						<VStack spacing={2}>
-							<Text as='h1' fontSize='xl' fontWeight='extrabold'>
+							<Text as='h1' fontSize='2xl' fontWeight='extrabold'>
 								👀 Oops, are you lost?
 							</Text>
 							<Text

@@ -105,7 +105,7 @@ export default function Login() {
 				<Center height={'100vh'} width={'100vw'} backgroundColor={'#fffcf7'}>
 					<Stack spacing={4} width='350px'>
 						<VStack spacing={2}>
-							<Text as='h1' fontSize='xl' fontWeight='bold'>
+							<Text as='h1' fontSize='2xl' fontWeight='bold'>
 								👋 Welcome to Workdiary
 							</Text>
 							<Text
