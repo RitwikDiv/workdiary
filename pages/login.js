@@ -78,7 +78,7 @@ export default function Login() {
 			</Head>
 			<Container centerContent>
 				<Center height={'100vh'} width={'100vw'}>
-					<Stack spacing={6} width='350px'>
+					<Stack spacing={4} width='350px'>
 						<VStack spacing={2}>
 							<Text as='h1' fontSize='2xl' fontWeight='bold'>
 								👋 Welcome to Workdiary
@@ -139,7 +139,7 @@ export default function Login() {
 							</Text>
 							<Divider></Divider>
 						</HStack>
-						<VStack spacing={3} align='stretch'>
+						<VStack spacing={2} align='stretch'>
 							{oauthList.map((oauth) => (
 								<Button
 									key={oauth.name}
