@@ -11,7 +11,6 @@ import {
 	InputRightElement,
 	Stack,
 	Text,
-	useToast,
 	VStack,
 } from '@chakra-ui/react';
 import Head from 'next/head';
@@ -19,15 +18,14 @@ import { useState } from 'react';
 import { BsGithub as Github, BsStars } from 'react-icons/bs';
 import { FiAlertCircle, FiCheckCircle } from 'react-icons/fi';
 import validator from 'validator';
-import { supabase } from '../utils/supabaseClient';
+import { supabase } from '../utils/backend/supabaseClient';
+import { toast as Toast } from '../utils/ui/toasttoast';
 
 export default function Login() {
 	const [email, setEmail] = useState('');
 	const [valid, setValid] = useState(true);
 	const [loading, setLoading] = useState(false);
 	const oauthList = [{ name: 'Github', icon: <Github color='#211F1F' /> }];
-
-	const toast = useToast();
 
 	const handleLogin = async (email) => {
 		try {
@@ -36,28 +34,21 @@ export default function Login() {
 				const { error } = await supabase.auth.signIn({ email });
 				if (error) throw error;
 				setValid(true);
-				toast({
+				Toast({
 					title: 'Check your email',
 					description:
-						'We sent you an email with a special link to login to your account!',
+						'We sent you an email with a special link to login to your account.',
 					status: 'success',
-					variant: 'left-accent',
-					duration: 20000,
-					isClosable: true,
 				});
 			} else {
 				setValid(false);
 			}
 		} catch (error) {
 			setValid(false);
-			toast({
+			Toast({
 				title: 'Internal Error',
-				description:
-					'We are unable to send you the magic link right now. Please try again later.',
+				description: 'Something went wrong. Please try again later.',
 				status: 'error',
-				variant: 'left-accent',
-				duration: 20000,
-				isClosable: true,
 			});
 		} finally {
 			setLoading(false);
@@ -65,9 +56,18 @@ export default function Login() {
 	};
 
 	async function oauthLogin(provider) {
-		const { user, session, error } = await supabase.auth.signIn({
-			provider: provider,
-		});
+		try {
+			const { error } = await supabase.auth.signIn({
+				provider: provider,
+			});
+			if (error) throw error;
+		} catch (error) {
+			Toast({
+				title: 'Internal Error',
+				description: 'Something went wrong. Please try again later.',
+				status: 'error',
+			});
+		}
 	}
 
 	return (
@@ -76,12 +76,12 @@ export default function Login() {
 				<meta charset='UTF-8' />
 				<title>WorkDiary Login</title>
 			</Head>
-			<Container maxW='xl' centerContent>
+			<Container centerContent>
 				<Center height={'100vh'} width={'100vw'}>
 					<Stack spacing={6} width='350px'>
 						<VStack spacing={2}>
 							<Text as='h1' fontSize='2xl' fontWeight='bold'>
-								👋 Welcome to Workdiary!
+								👋 Welcome to Workdiary
 							</Text>
 							<Text
 								as='p'
@@ -156,4 +156,12 @@ export default function Login() {
 			</Container>
 		</>
 	);
+}
+
+export async function getServerSideProps({ req }) {
+	const { user } = await supabase.auth.api.getUserByCookie(req);
+	if (user) {
+		return { props: {}, redirect: { destination: '/account' } };
+	}
+	return { props: {} };
 }
