@@ -19,7 +19,7 @@ import { BsGithub as Github, BsStars } from 'react-icons/bs';
 import { FiAlertCircle, FiCheckCircle } from 'react-icons/fi';
 import validator from 'validator';
 import { supabase } from '../utils/backend/supabaseClient';
-import { toast as Toast } from '../utils/ui/toasttoast';
+import { toast as Toast } from '../utils/ui/toast';
 
 export default function Login() {
 	const [email, setEmail] = useState('');
