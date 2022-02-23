@@ -12,20 +12,31 @@ import {
 	Stack,
 	Text,
 	VStack,
+	useToast,
 } from '@chakra-ui/react';
 import Head from 'next/head';
 import { useState } from 'react';
-import { BsGithub as Github, BsStars } from 'react-icons/bs';
+import {
+	BsGithub as Github,
+	BsStars,
+	BsLinkedin as LinkedIn,
+} from 'react-icons/bs';
 import { FiAlertCircle, FiCheckCircle } from 'react-icons/fi';
+import { SiNotion as Notion } from 'react-icons/si';
 import validator from 'validator';
 import { supabase } from '../utils/backend/supabaseClient';
-import { toast as Toast } from '../utils/ui/toast';
 
 export default function Login() {
 	const [email, setEmail] = useState('');
 	const [valid, setValid] = useState(true);
 	const [loading, setLoading] = useState(false);
-	const oauthList = [{ name: 'Github', icon: <Github color='#211F1F' /> }];
+	const toast = useToast();
+
+	const oauthList = [
+		{ name: 'LinkedIn', icon: <LinkedIn color='#0e76a8' /> },
+		{ name: 'Github', icon: <Github /> },
+		{ name: 'Notion', icon: <Notion /> },
+	];
 
 	const handleLogin = async (email) => {
 		try {
@@ -34,53 +45,67 @@ export default function Login() {
 				const { error } = await supabase.auth.signIn({ email });
 				if (error) throw error;
 				setValid(true);
-				Toast({
+				toast.closeAll();
+				toast({
 					title: 'Check your email',
 					description:
 						'We sent you an email with a special link to login to your account.',
 					status: 'success',
+					variant: 'left-accent',
+					position: 'top-right',
+					duration: 20000,
+					isClosable: true,
 				});
 			} else {
 				setValid(false);
 			}
 		} catch (error) {
-			setValid(false);
-			Toast({
+			toast.closeAll();
+			toast({
 				title: 'Internal Error',
 				description: 'Something went wrong. Please try again later.',
 				status: 'error',
+				variant: 'left-accent',
+				position: 'top-right',
+				duration: 20000,
+				isClosable: true,
 			});
 		} finally {
 			setLoading(false);
 		}
 	};
 
-	async function oauthLogin(provider) {
+	const oauthLogin = async (provider) => {
 		try {
 			const { error } = await supabase.auth.signIn({
 				provider: provider,
 			});
 			if (error) throw error;
 		} catch (error) {
-			Toast({
+			toast.closeAll();
+			toast({
 				title: 'Internal Error',
 				description: 'Something went wrong. Please try again later.',
 				status: 'error',
+				variant: 'left-accent',
+				position: 'top-right',
+				duration: 20000,
+				isClosable: true,
 			});
 		}
-	}
+	};
 
 	return (
 		<>
 			<Head>
 				<meta charset='UTF-8' />
-				<title>WorkDiary Login</title>
+				<title>Login | WorkDiary</title>
 			</Head>
 			<Container centerContent>
-				<Center height={'100vh'} width={'100vw'}>
+				<Center height={'100vh'} width={'100vw'} backgroundColor={'#fffcf7'}>
 					<Stack spacing={4} width='350px'>
 						<VStack spacing={2}>
-							<Text as='h1' fontSize='2xl' fontWeight='bold'>
+							<Text as='h1' fontSize='xl' fontWeight='bold'>
 								👋 Welcome to Workdiary
 							</Text>
 							<Text
@@ -122,6 +147,7 @@ export default function Login() {
 							<Button
 								leftIcon={<BsStars color='orange' />}
 								variant={'solid'}
+								size='md'
 								colorScheme='purple'
 								isLoading={loading}
 								loadingText={'Sending ...'}
@@ -145,6 +171,7 @@ export default function Login() {
 									key={oauth.name}
 									variant='outline'
 									color={'gray.600'}
+									size='md'
 									onClick={() => oauthLogin(oauth.name.toLowerCase())}
 									leftIcon={oauth.icon}>
 									Continue with {oauth.name}
