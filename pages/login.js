@@ -102,7 +102,7 @@ export default function Login() {
 				<title>Login | WorkDiary</title>
 			</Head>
 			<Container centerContent>
-				<Center height={'100vh'} width={'100vw'} backgroundColor={'#fffcf7'}>
+				<Center height={'100vh'} width={'100vw'}>
 					<Stack spacing={4} width='350px'>
 						<VStack spacing={2}>
 							<Text as='h1' fontSize='2xl' fontWeight='bold'>

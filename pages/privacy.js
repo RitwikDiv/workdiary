@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
 						Policy has been created with the help of the{' '}
 						<Link
 							href='https://www.freeprivacypolicy.com/blog/sample-privacy-policy-template/'
-							target='_blank'>
+							isExternal>
 							Privacy Policy Template
 						</Link>
 						.

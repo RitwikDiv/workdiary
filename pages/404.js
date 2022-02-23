@@ -19,7 +19,7 @@ export default function NotFound() {
 				<title>404: Not Found | WorkDiary</title>
 			</Head>
 			<Container centerContent>
-				<Center height={'100vh'} width={'100vw'} backgroundColor={'#fffcf7'}>
+				<Center height={'100vh'} width={'100vw'}>
 					<Stack spacing={4} width='350px' align={'stretch'}>
 						<Center>
 							<Image
