@@ -14,6 +14,7 @@ import {
 	VStack,
 	Image,
 	useToast,
+	Link,
 } from '@chakra-ui/react';
 import Head from 'next/head';
 import { useState } from 'react';
@@ -26,6 +27,7 @@ import { FiAlertCircle, FiCheckCircle } from 'react-icons/fi';
 import { SiNotion as Notion } from 'react-icons/si';
 import validator from 'validator';
 import { supabase } from '../utils/backend/supabaseClient';
+import NextLink from 'next/link';
 
 export default function Login() {
 	const [email, setEmail] = useState('');
@@ -107,18 +109,14 @@ export default function Login() {
 						<VStack spacing={2}>
 							<Image
 								src='logo.svg'
-								color='orange'
+								alt='Workdiary Logo'
 								htmlHeight={'100px'}
 								htmlWidth='100px'></Image>
 							<Text as='h1' fontSize='2xl' fontWeight='bold'>
 								👋 Welcome to Workdiary
 							</Text>
-							<Text
-								as='p'
-								fontSize='md'
-								color={'gray.500'}
-								fontWeight={'light'}>
-								You don't need a password. It's safer that way.
+							<Text as='p' fontSize='md' color={'gray.600'}>
+								You don&apos;t need a password. It&apos;s safer that way.
 							</Text>
 						</VStack>
 						<VStack spacing={2} align='stretch'>
@@ -133,20 +131,16 @@ export default function Login() {
 										size='md'
 										onChange={(e) => setEmail(e.target.value)}
 									/>
-									<InputRightElement
-										children={
-											valid ? (
-												<FiCheckCircle color='green' />
-											) : (
-												<FiAlertCircle color='red' />
-											)
-										}
-									/>
+									<InputRightElement>
+										{valid ? (
+											<FiCheckCircle color='green' />
+										) : (
+											<FiAlertCircle color='red' />
+										)}
+									</InputRightElement>
 								</InputGroup>
-								<FormHelperText color={valid ? 'gray.500' : 'red'}>
-									{valid
-										? "We'll never share your email."
-										: 'Please enter a valid email.'}
+								<FormHelperText color='gray.600' fontSize={'sm'}>
+									We&apos;ll never share your email
 								</FormHelperText>
 							</FormControl>
 							<Button
@@ -165,7 +159,7 @@ export default function Login() {
 						</VStack>
 						<HStack spacing={2}>
 							<Divider></Divider>
-							<Text fontSize='md' color={'gray.500'}>
+							<Text fontSize='md' color={'gray.600'}>
 								or
 							</Text>
 							<Divider></Divider>
@@ -183,6 +177,17 @@ export default function Login() {
 								</Button>
 							))}
 						</VStack>
+						<HStack spacing={2} justifyContent='center'>
+							<NextLink href='/privacy' passHref>
+								<Link
+									fontSize={'sm'}
+									fontWeight='semibold'
+									color='gray.600'
+									textDecoration={'underline'}>
+									Privacy Policy
+								</Link>
+							</NextLink>
+						</HStack>
 					</Stack>
 				</Center>
 			</Container>

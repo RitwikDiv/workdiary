@@ -30,7 +30,7 @@ export default function NotFound() {
 						</Center>
 						<VStack spacing={2}>
 							<Text as='h1' fontSize='2xl' fontWeight='extrabold'>
-								Oops, are you lost?
+								🔍 Oops, are you lost?
 							</Text>
 							<Text
 								as='p'
@@ -38,8 +38,8 @@ export default function NotFound() {
 								color={'gray.500'}
 								fontWeight={'light'}
 								align='center'>
-								We're sorry, but the page you are looking for has been moved or
-								does not exist.
+								We&apos;re sorry, but the page you are looking for has been
+								moved or does not exist.
 							</Text>
 						</VStack>
 						<Button
