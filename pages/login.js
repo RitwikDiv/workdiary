@@ -102,6 +102,12 @@ export default function Login() {
 		<>
 			<Head>
 				<title>Login | WorkDiary</title>
+				<meta
+					name='description'
+					content='Login/Get Started with Workdiary.app'></meta>
+				<meta
+					name='keywords'
+					content='Workdiary, Login, Sign up, Get Started'></meta>
 			</Head>
 			<Container centerContent>
 				<Center height={'100vh'} width={'100vw'}>

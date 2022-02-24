@@ -25,6 +25,10 @@ export default function PrivacyPolicy() {
 		<>
 			<Head>
 				<title>Privacy Policy | WorkDiary</title>
+				<meta
+					name='description'
+					content='Privacy Policy for Workdiary.app'></meta>
+				<meta name='keywords' content='Workdiary, Privacy, Policy'></meta>
 			</Head>
 			<Container maxWidth={'container.lg'} padding={5}>
 				<HStack

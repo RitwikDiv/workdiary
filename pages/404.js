@@ -15,8 +15,11 @@ export default function NotFound() {
 	return (
 		<>
 			<Head>
-				<meta charset='UTF-8' />
 				<title>404: Not Found | WorkDiary</title>
+				<meta
+					name='description'
+					content='404 - Page Not Found Workdiary.app'></meta>
+				<meta name='keywords' content='Workdiary, 404, page not found'></meta>
 			</Head>
 			<Container centerContent>
 				<Center height={'100vh'} width={'100vw'}>
