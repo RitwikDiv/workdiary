@@ -1,23 +1,23 @@
 import {
-	Container,
-	Text,
-	VStack,
-	Link,
-	UnorderedList,
-	ListItem,
-	Button,
-	Image,
-	Spacer,
-	HStack,
-	AccordionIcon,
 	Accordion,
 	AccordionButton,
-	AccordionPanel,
+	AccordionIcon,
 	AccordionItem,
+	AccordionPanel,
+	Button,
+	Container,
+	HStack,
+	Image,
+	Link,
+	ListItem,
+	Spacer,
+	Text,
+	UnorderedList,
+	VStack,
 } from '@chakra-ui/react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { FiChevronLeft as LeftIcon } from 'react-icons/fi';
-import Head from 'next/head';
 
 export default function PrivacyPolicy() {
 	const router = useRouter();
@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
 					content='Privacy Policy for Workdiary.app'></meta>
 				<meta name='keywords' content='Workdiary, Privacy, Policy'></meta>
 			</Head>
-			<Container maxWidth={'container.lg'} padding={5}>
+			<Container maxWidth={'container.lg'}>
 				<HStack
 					width={'100%'}
 					justifyContent={'space-between'}
@@ -53,13 +53,9 @@ export default function PrivacyPolicy() {
 						htmlWidth='100px'></Image>
 				</HStack>
 				<VStack align='start' spacing={4}>
-					<Text as='h1' fontSize='2xl' fontWeight={'bold'}>
-						📜 Privacy Policy
-					</Text>
-					<Text as='p' fontSize={'sm'} fontWeight='semibold'>
-						Last updated: February 23, 2022
-					</Text>
-					<Text as='p' fontSize={'md'} align='justify'>
+					<Text variant={'title'}>📜 Privacy Policy</Text>
+					<Text variant={'support'}>Last updated: February 23, 2022</Text>
+					<Text variant={'body'}>
 						This Privacy Policy describes Our policies and procedures on the
 						collection, use and disclosure of Your information when You use the
 						Service and tells You about Your privacy rights and how the law
@@ -74,40 +70,34 @@ export default function PrivacyPolicy() {
 						</Link>
 						.
 					</Text>
-					<Accordion allowToggle width={'100%'}>
+					<Accordion defaultIndex={[0]} allowToggle width={'100%'}>
 						<AccordionItem>
 							<AccordionButton _expanded={{ bg: 'gray.100' }}>
-								<Text as='h2' fontSize='lg' fontWeight={'bold'}>
-									Interpretation and Definitions
-								</Text>
+								<Text variant={'heading2'}>Interpretation and Definitions</Text>
 								<AccordionIcon />
 							</AccordionButton>
 							<AccordionPanel>
-								<VStack spacing={2} align='start'>
-									<Text as='h2' fontSize='lg' fontWeight={'bold'}>
-										Interpretation
-									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+								<VStack spacing={4} align='start'>
+									<Text variant={'heading3'}>Interpretation</Text>
+									<Text variant={'body'}>
 										The words of which the initial letter is capitalized have
 										meanings defined under the following conditions. The
 										following definitions shall have the same meaning regardless
 										of whether they appear in singular or in plural.
 									</Text>
-									<Text as='h2' fontSize='lg' fontWeight={'bold'}>
-										Definitions
-									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'heading3'}>Definitions</Text>
+									<Text variant={'body'}>
 										For the purposes of this Privacy Policy:
 									</Text>
 									<UnorderedList pl={'10'} spacing={2}>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>Account</strong> means a unique account created
 												for You to access our Service or parts of our Service.
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>Company</strong> (referred to as either
 												&quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot;
 												or &quot;Our&quot; in this Agreement) refers to
@@ -115,7 +105,7 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>Cookies</strong> are small files that are placed
 												on Your computer, mobile device or any other device by a
 												website, containing the details of Your browsing history
@@ -123,31 +113,31 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>Country</strong> refers to: California, United
 												States
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>Device</strong> means any device that can access
 												the Service such as a computer, a cellphone or a digital
 												tablet.
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>Personal Data</strong> is any information that
 												relates to an identified or identifiable individual.
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>Service</strong> refers to the Website.
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>Service Provider</strong> means any natural or
 												legal person who processes the data on behalf of the
 												Company. It refers to third-party companies or
@@ -159,7 +149,7 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>Third-party Social Media Service</strong> refers
 												to any website or any social network website through
 												which a User can log in or create an account to use the
@@ -167,7 +157,7 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>Usage Data</strong> refers to data collected
 												automatically, either generated by the use of the
 												Service or from the Service infrastructure itself (for
@@ -175,7 +165,7 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>Website</strong> refers to WorkDiary, accessible
 												from{' '}
 												<Link
@@ -187,7 +177,7 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>You</strong> means the individual accessing or
 												using the Service, or the company, or other legal entity
 												on behalf of which such individual is accessing or using
@@ -200,24 +190,16 @@ export default function PrivacyPolicy() {
 						</AccordionItem>
 						<AccordionItem>
 							<AccordionButton _expanded={{ bg: 'gray.100' }}>
-								<Text as='h2' fontSize='lg' fontWeight={'bold'}>
+								<Text variant={'heading2'}>
 									Collecting and Using Personal Data
 								</Text>
 								<AccordionIcon />
 							</AccordionButton>
 							<AccordionPanel>
-								<VStack spacing={2} align='start'>
-									<Text
-										as='h2'
-										align={'start'}
-										fontSize='lg'
-										fontWeight={'bold'}>
-										Types of Data Collected
-									</Text>
-									<Text as='h3' fontSize='md' fontWeight={'bold'}>
-										Personal Data
-									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+								<VStack spacing={4} align='start'>
+									<Text variant={'heading3'}>Types of Data Collected</Text>
+									<Text variant={'heading4'}>Personal Data</Text>
+									<Text variant={'body'}>
 										While using Our Service, We may ask You to provide Us with
 										certain personally identifiable information that can be used
 										to contact or identify You. Personally identifiable
@@ -225,29 +207,21 @@ export default function PrivacyPolicy() {
 									</Text>
 									<UnorderedList pl={'10'} spacing={2}>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
-												Email address
-											</Text>
+											<Text variant={'body'}>Email address</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
-												First name and last name
-											</Text>
+											<Text variant={'body'}>First name and last name</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
-												Usage Data
-											</Text>
+											<Text variant={'body'}>Usage Data</Text>
 										</ListItem>
 									</UnorderedList>
-									<Text as='h3' fontSize='md' fontWeight={'bold'}>
-										Usage Data
-									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'heading3'}>Usage Data</Text>
+									<Text variant={'body'}>
 										Usage Data is collected automatically when using the
 										Service.
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										Usage Data may include information such as Your
 										Device&apos;s Internet Protocol address (e.g. IP address),
 										browser type, browser version, the pages of our Service that
@@ -255,7 +229,7 @@ export default function PrivacyPolicy() {
 										on those pages, unique device identifiers and other
 										diagnostic data.
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										When You access the Service by or through a mobile device,
 										We may collect certain information automatically, including,
 										but not limited to, the type of mobile device You use, Your
@@ -264,15 +238,15 @@ export default function PrivacyPolicy() {
 										Internet browser You use, unique device identifiers and
 										other diagnostic data.
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										We may also collect information that Your browser sends
 										whenever You visit our Service or when You access the
 										Service by or through a mobile device.
 									</Text>
-									<Text as='h3' fontSize='md' fontWeight={'bold'}>
+									<Text variant={'heading3'}>
 										Information from Third-Party Social Media Services
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										The Company allows You to create an account and log in to
 										use the Service through the following Third-party Social
 										Media Services:
@@ -282,7 +256,7 @@ export default function PrivacyPolicy() {
 										<ListItem>Github</ListItem>
 										<ListItem>Notion</ListItem>
 									</UnorderedList>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										If You decide to register through or otherwise grant us
 										access to a Third-Party Social Media Service, We may collect
 										Personal data that is already associated with Your
@@ -290,7 +264,7 @@ export default function PrivacyPolicy() {
 										Your name, Your email address, Your activities or Your
 										contact list associated with that account.
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										You may also have the option of sharing additional
 										information with the Company through Your Third-Party Social
 										Media Service&apos;s account. If You choose to provide such
@@ -299,10 +273,10 @@ export default function PrivacyPolicy() {
 										share, and store it in a manner consistent with this Privacy
 										Policy.
 									</Text>
-									<Text as='h3' fontSize='md' fontWeight={'bold'}>
+									<Text variant={'heading3'}>
 										Tracking Technologies and Cookies
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										We use Cookies and similar tracking technologies to track
 										the activity on Our Service and store certain information.
 										Tracking technologies used are beacons, tags, and scripts to
@@ -331,7 +305,7 @@ export default function PrivacyPolicy() {
 											integrity).
 										</ListItem>
 									</UnorderedList>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										Cookies can be &quot;Persistent&quot; or &quot;Session&quot;
 										Cookies. Persistent Cookies remain on Your personal computer
 										or mobile device when You go offline, while Session Cookies
@@ -344,22 +318,18 @@ export default function PrivacyPolicy() {
 										</Link>
 										.
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										We use both Session and Persistent Cookies for the purposes
 										set out below:
 									</Text>
 									<UnorderedList pl={'10'} spacing={2}>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>Necessary / Essential Cookies</strong>
 											</Text>
-											<Text as='p' fontSize={'md'} align='justify'>
-												Type: Session Cookies
-											</Text>
-											<Text as='p' fontSize={'md'} align='justify'>
-												Administered by: Us
-											</Text>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>Type: Session Cookies</Text>
+											<Text variant={'body'}>Administered by: Us</Text>
+											<Text variant={'body'}>
 												Purpose: These Cookies are essential to provide You with
 												services available through the Website and to enable You
 												to use some of its features. They help to authenticate
@@ -370,33 +340,25 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>
 													Cookies Policy / Notice Acceptance Cookies
 												</strong>
 											</Text>
-											<Text as='p' fontSize={'md'} align='justify'>
-												Type: Persistent Cookies
-											</Text>
-											<Text as='p' fontSize={'md'} align='justify'>
-												Administered by: Us
-											</Text>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>Type: Persistent Cookies</Text>
+											<Text variant={'body'}>Administered by: Us</Text>
+											<Text variant={'body'}>
 												Purpose: These Cookies identify if users have accepted
 												the use of cookies on the Website.
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>Functionality Cookies</strong>
 											</Text>
-											<Text as='p' fontSize={'md'} align='justify'>
-												Type: Persistent Cookies
-											</Text>
-											<Text as='p' fontSize={'md'} align='justify'>
-												Administered by: Us
-											</Text>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>Type: Persistent Cookies</Text>
+											<Text variant={'body'}>Administered by: Us</Text>
+											<Text variant={'body'}>
 												Purpose: These Cookies allow us to remember choices You
 												make when You use the Website, such as remembering your
 												login details or language preference. The purpose of
@@ -406,31 +368,25 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 									</UnorderedList>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										For more information about the cookies we use and your
 										choices regarding cookies, please visit our Cookies Policy
 										or the Cookies section of our Privacy Policy.
 									</Text>
-									<Text
-										as='h2'
-										align={'start'}
-										fontSize='lg'
-										fontWeight={'bold'}>
-										Use of Your Personal Data
-									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'heading3'}>Use of Your Personal Data</Text>
+									<Text variant={'body'}>
 										The Company may use Personal Data for the following
 										purposes:
 									</Text>
 									<UnorderedList pl={'10'} spacing={2}>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>To provide and maintain our Service</strong>,
 												including to monitor the usage of our Service.
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>To manage Your Account:</strong> to manage Your
 												registration as a user of the Service. The Personal Data
 												You provide can give You access to different
@@ -439,7 +395,7 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>For the performance of a contract:</strong> the
 												development, compliance and undertaking of the purchase
 												contract for the products, items or services You have
@@ -448,7 +404,7 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>To contact You:</strong> To contact You by
 												email, telephone calls, SMS, or other equivalent forms
 												of electronic communication, such as a mobile
@@ -460,7 +416,7 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>To provide You</strong> with news, special
 												offers and general information about other goods,
 												services and events which we offer that are similar to
@@ -469,13 +425,13 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>To manage Your requests:</strong> To attend and
 												manage Your requests to Us.
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>For business transfers:</strong> We may use Your
 												information to evaluate or conduct a merger,
 												divestiture, restructuring, reorganization, dissolution,
@@ -487,7 +443,7 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 										<ListItem>
-											<Text as='p' fontSize={'md'} align='justify'>
+											<Text variant={'body'}>
 												<strong>For other purposes</strong>: We may use Your
 												information for other purposes, such as data analysis,
 												identifying usage trends, determining the effectiveness
@@ -497,7 +453,7 @@ export default function PrivacyPolicy() {
 											</Text>
 										</ListItem>
 									</UnorderedList>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										We may share Your personal information in the following
 										situations:
 									</Text>
@@ -545,14 +501,10 @@ export default function PrivacyPolicy() {
 											consent.
 										</ListItem>
 									</UnorderedList>
-									<Text
-										as='h2'
-										align={'start'}
-										fontSize='lg'
-										fontWeight={'bold'}>
+									<Text variant={'heading3'}>
 										Retention of Your Personal Data
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										The Company will retain Your Personal Data only for as long
 										as is necessary for the purposes set out in this Privacy
 										Policy. We will retain and use Your Personal Data to the
@@ -561,7 +513,7 @@ export default function PrivacyPolicy() {
 										with applicable laws), resolve disputes, and enforce our
 										legal agreements and policies.
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										The Company will also retain Usage Data for internal
 										analysis purposes. Usage Data is generally retained for a
 										shorter period of time, except when this data is used to
@@ -569,14 +521,10 @@ export default function PrivacyPolicy() {
 										Our Service, or We are legally obligated to retain this data
 										for longer time periods.
 									</Text>
-									<Text
-										as='h2'
-										align={'start'}
-										fontSize='lg'
-										fontWeight={'bold'}>
+									<Text variant={'heading3'}>
 										Transfer of Your Personal Data
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										Your information, including Personal Data, is processed at
 										the Company&apos;s operating offices and in any other places
 										where the parties involved in the processing are located. It
@@ -586,12 +534,12 @@ export default function PrivacyPolicy() {
 										the data protection laws may differ than those from Your
 										jurisdiction.
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										Your consent to this Privacy Policy followed by Your
 										submission of such information represents Your agreement to
 										that transfer.
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										The Company will take all steps reasonably necessary to
 										ensure that Your data is treated securely and in accordance
 										with this Privacy Policy and no transfer of Your Personal
@@ -599,35 +547,25 @@ export default function PrivacyPolicy() {
 										there are adequate controls in place including the security
 										of Your data and other personal information.
 									</Text>
-									<Text
-										as='h2'
-										align={'start'}
-										fontSize='lg'
-										fontWeight={'bold'}>
+									<Text variant={'heading3'}>
 										Disclosure of Your Personal Data
 									</Text>
-									<Text as='h3' fontSize='md' fontWeight={'bold'}>
-										Business Transactions
-									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'heading4'}>Business Transactions</Text>
+									<Text variant={'body'}>
 										If the Company is involved in a merger, acquisition or asset
 										sale, Your Personal Data may be transferred. We will provide
 										notice before Your Personal Data is transferred and becomes
 										subject to a different Privacy Policy.
 									</Text>
-									<Text as='h3' fontSize='md' fontWeight={'bold'}>
-										Law enforcement
-									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'heading4'}>Law enforcement</Text>
+									<Text variant={'body'}>
 										Under certain circumstances, the Company may be required to
 										disclose Your Personal Data if required to do so by law or
 										in response to valid requests by public authorities (e.g. a
 										court or a government agency).
 									</Text>
-									<Text as='h3' fontSize='md' fontWeight={'bold'}>
-										Other legal requirements
-									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'heading4'}>Other legal requirements</Text>
+									<Text variant={'body'}>
 										The Company may disclose Your Personal Data in the good
 										faith belief that such action is necessary to:
 									</Text>
@@ -646,14 +584,10 @@ export default function PrivacyPolicy() {
 										</ListItem>
 										<ListItem>Protect against legal liability</ListItem>
 									</UnorderedList>
-									<Text
-										as='h2'
-										align={'start'}
-										fontSize='lg'
-										fontWeight={'bold'}>
+									<Text variant={'heading3'}>
 										Security of Your Personal Data
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										The security of Your Personal Data is important to Us, but
 										remember that no method of transmission over the Internet,
 										or method of electronic storage is 100% secure. While We
@@ -665,14 +599,12 @@ export default function PrivacyPolicy() {
 						</AccordionItem>
 						<AccordionItem>
 							<AccordionButton _expanded={{ bg: 'gray.100' }}>
-								<Text as='h2' fontSize='lg' fontWeight={'bold'}>
-									Children&apos;s Privacy
-								</Text>
+								<Text variant={'heading2'}>Children&apos;s Privacy</Text>
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
 							<AccordionPanel>
-								<VStack spacing={2}>
-									<Text as='p' fontSize={'md'} align='justify'>
+								<VStack spacing={4}>
+									<Text variant={'body'}>
 										Our Service does not address anyone under the age of 13. We
 										do not knowingly collect personally identifiable information
 										from anyone under the age of 13. If You are a parent or
@@ -682,7 +614,7 @@ export default function PrivacyPolicy() {
 										age of 13 without verification of parental consent, We take
 										steps to remove that information from Our servers.
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										If We need to rely on consent as a legal basis for
 										processing Your information and Your country requires
 										consent from a parent, We may require Your parent&apos;s
@@ -693,21 +625,19 @@ export default function PrivacyPolicy() {
 						</AccordionItem>
 						<AccordionItem>
 							<AccordionButton _expanded={{ bg: 'gray.100' }}>
-								<Text as='h2' fontSize='lg' fontWeight={'bold'}>
-									Links to Other Websites
-								</Text>
+								<Text variant={'heading2'}>Links to Other Websites</Text>
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
 							<AccordionPanel>
-								<VStack spacing={2}>
-									<Text as='p' fontSize={'md'} align='justify'>
+								<VStack spacing={4}>
+									<Text variant={'body'}>
 										Our Service may contain links to other websites that are not
 										operated by Us. If You click on a third party link, You will
 										be directed to that third party&apos;s site. We strongly
 										advise You to review the Privacy Policy of every site You
 										visit.
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										We have no control over and assume no responsibility for the
 										content, privacy policies or practices of any third party
 										sites or services.
@@ -717,25 +647,23 @@ export default function PrivacyPolicy() {
 						</AccordionItem>
 						<AccordionItem>
 							<AccordionButton _expanded={{ bg: 'gray.100' }}>
-								<Text as='h2' fontSize='lg' fontWeight={'bold'}>
-									Changes to this Privacy Policy
-								</Text>
+								<Text variant={'heading2'}>Changes to this Privacy Policy</Text>
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
 							<AccordionPanel>
-								<VStack spacing={2}>
-									<Text as='p' fontSize={'md'} align='justify'>
+								<VStack spacing={4}>
+									<Text variant={'body'}>
 										We may update Our Privacy Policy from time to time. We will
 										notify You of any changes by posting the new Privacy Policy
 										on this page.
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										We will let You know via email and/or a prominent notice on
 										Our Service, prior to the change becoming effective and
 										update the &quot;Last updated&quot; date at the top of this
 										Privacy Policy.
 									</Text>
-									<Text as='p' fontSize={'md'} align='justify'>
+									<Text variant={'body'}>
 										You are advised to review this Privacy Policy periodically
 										for any changes. Changes to this Privacy Policy are
 										effective when they are posted on this page.

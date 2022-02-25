@@ -32,23 +32,14 @@ export default function NotFound() {
 								htmlWidth={'200px'}></Image>
 						</Center>
 						<VStack spacing={2}>
-							<Text as='h1' fontSize='2xl' fontWeight='extrabold'>
-								🔍 Oops, are you lost?
-							</Text>
-							<Text
-								as='p'
-								fontSize='md'
-								color={'gray.500'}
-								fontWeight={'light'}
-								align='center'>
+							<Text variant={'title'}>🔍 Oops, are you lost?</Text>
+							<Text variant={'body'} textAlign='center'>
 								We&apos;re sorry, but the page you are looking for has been
 								moved or does not exist.
 							</Text>
 						</VStack>
 						<Button
 							variant={'solid'}
-							colorScheme='purple'
-							size={'md'}
 							onClick={() => {
 								router.push('/account');
 							}}>

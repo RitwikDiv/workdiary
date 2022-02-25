@@ -118,10 +118,8 @@ export default function Login() {
 								alt='Workdiary Logo'
 								htmlHeight={'100px'}
 								htmlWidth='100px'></Image>
-							<Text as='h1' fontSize='2xl' fontWeight='bold'>
-								👋 Welcome to Workdiary
-							</Text>
-							<Text as='p' fontSize='md' color={'gray.600'}>
+							<Text variant={'title'}>👋 Welcome to Workdiary</Text>
+							<Text variant={'body'}>
 								You don&apos;t need a password. It&apos;s safer that way.
 							</Text>
 						</VStack>
@@ -152,8 +150,6 @@ export default function Login() {
 							<Button
 								leftIcon={<BsStars color='orange' />}
 								variant={'solid'}
-								size='md'
-								colorScheme='purple'
 								isLoading={loading}
 								loadingText={'Sending ...'}
 								onClick={(e) => {
@@ -165,9 +161,7 @@ export default function Login() {
 						</VStack>
 						<HStack spacing={2}>
 							<Divider></Divider>
-							<Text fontSize='md' color={'gray.600'}>
-								or
-							</Text>
+							<Text variant={'body'}>or</Text>
 							<Divider></Divider>
 						</HStack>
 						<VStack spacing={2} align='stretch'>
@@ -175,8 +169,6 @@ export default function Login() {
 								<Button
 									key={oauth.name}
 									variant='outline'
-									color={'gray.600'}
-									size='md'
 									onClick={() => oauthLogin(oauth.name.toLowerCase())}
 									leftIcon={oauth.icon}>
 									Continue with {oauth.name}
@@ -186,7 +178,7 @@ export default function Login() {
 						<HStack spacing={2} justifyContent='center'>
 							<NextLink href='/privacy' passHref>
 								<Link
-									fontSize={'sm'}
+									fontSize={'md'}
 									fontWeight='semibold'
 									color='gray.600'
 									textDecoration={'underline'}>
