@@ -1,7 +1,6 @@
 const Link = {
 	baseStyle: {
 		color: 'textPrimary',
-		fontSize: 'md',
 		fontWeight: 'bold',
 		textDecoration: 'underline',
 		_hover: {
