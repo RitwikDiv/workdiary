@@ -13,6 +13,7 @@ import {
 	Spacer,
 	Text,
 	UnorderedList,
+	useColorModeValue,
 	VStack,
 } from '@chakra-ui/react';
 import Head from 'next/head';
@@ -30,7 +31,7 @@ export default function PrivacyPolicy() {
 					content='Privacy Policy for Workdiary.app'></meta>
 				<meta name='keywords' content='Workdiary, Privacy, Policy'></meta>
 			</Head>
-			<Container maxWidth={'container.lg'}>
+			<Container maxWidth={'container.lg'} p='4'>
 				<HStack
 					width={'100%'}
 					justifyContent={'space-between'}
@@ -38,8 +39,6 @@ export default function PrivacyPolicy() {
 					spacing={4}>
 					<Button
 						variant='outline'
-						color={'gray.600'}
-						size='md'
 						onClick={() => router.push('/account')}
 						leftIcon={<LeftIcon />}>
 						Go back home
@@ -72,7 +71,8 @@ export default function PrivacyPolicy() {
 					</Text>
 					<Accordion defaultIndex={[0]} allowToggle width={'100%'}>
 						<AccordionItem>
-							<AccordionButton _expanded={{ bg: 'gray.100' }}>
+							<AccordionButton
+								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
 								<Text variant={'heading2'}>Interpretation and Definitions</Text>
 								<AccordionIcon />
 							</AccordionButton>
@@ -189,7 +189,8 @@ export default function PrivacyPolicy() {
 							</AccordionPanel>
 						</AccordionItem>
 						<AccordionItem>
-							<AccordionButton _expanded={{ bg: 'gray.100' }}>
+							<AccordionButton
+								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
 								<Text variant={'heading2'}>
 									Collecting and Using Personal Data
 								</Text>
@@ -598,7 +599,8 @@ export default function PrivacyPolicy() {
 							</AccordionPanel>
 						</AccordionItem>
 						<AccordionItem>
-							<AccordionButton _expanded={{ bg: 'gray.100' }}>
+							<AccordionButton
+								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
 								<Text variant={'heading2'}>Children&apos;s Privacy</Text>
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
@@ -624,7 +626,8 @@ export default function PrivacyPolicy() {
 							</AccordionPanel>
 						</AccordionItem>
 						<AccordionItem>
-							<AccordionButton _expanded={{ bg: 'gray.100' }}>
+							<AccordionButton
+								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
 								<Text variant={'heading2'}>Links to Other Websites</Text>
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
@@ -646,7 +649,8 @@ export default function PrivacyPolicy() {
 							</AccordionPanel>
 						</AccordionItem>
 						<AccordionItem>
-							<AccordionButton _expanded={{ bg: 'gray.100' }}>
+							<AccordionButton
+								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
 								<Text variant={'heading2'}>Changes to this Privacy Policy</Text>
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
