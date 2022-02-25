@@ -5,6 +5,8 @@ import Text from './components/text';
 import Link from './components/link';
 
 export const theme = extendTheme({
+	initialColorMode: 'light',
+	useSystemColorMode: true,
 	fonts: {
 		heading: 'DM Sans, sans-serif',
 		body: 'DM Sans, sans-serif',
@@ -12,14 +14,13 @@ export const theme = extendTheme({
 	semanticTokens: {
 		colors: {
 			primary: 'purple.500',
-			secondary: 'gray.700',
 			textPrimary: {
 				default: 'gray.700',
 				_dark: 'gray.200',
 			},
 			textSecondary: {
 				default: 'gray.600',
-				_dark: 'gray.400',
+				_dark: 'gray.300',
 			},
 		},
 	},
