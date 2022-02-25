@@ -124,7 +124,7 @@ export default function Login() {
 							</Text>
 						</VStack>
 						<VStack spacing={2} align='stretch'>
-							<FormControl>
+							<FormControl autoComplete='off'>
 								<InputGroup>
 									<Input
 										autoComplete='email'
@@ -143,7 +143,7 @@ export default function Login() {
 										)}
 									</InputRightElement>
 								</InputGroup>
-								<FormHelperText color='gray.600' fontSize={'sm'}>
+								<FormHelperText>
 									We&apos;ll never share your email
 								</FormHelperText>
 							</FormControl>
