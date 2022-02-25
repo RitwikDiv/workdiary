@@ -1,7 +1,6 @@
 const Button = {
 	baseStyle: {
 		fontWeight: 'bold',
-		boxShadow: 'sm',
 	},
 	sizes: {
 		sm: {
@@ -17,13 +16,20 @@ const Button = {
 	},
 	variants: {
 		outline: {
-			border: '1px solid',
-			borderColor: 'gray.200',
-			color: 'gray.700',
+			default: {
+				border: '1px solid',
+				borderColor: 'gray.300',
+				color: 'textSecondary',
+			},
+			_dark: {
+				border: '1px solid',
+				borderColor: 'gray.600',
+				color: 'textSecondary',
+			},
 		},
 		solid: {
-			bg: 'purple.500',
-			color: 'white',
+			bg: 'primary',
+			color: 'gray.100',
 			_hover: {
 				bg: 'purple.600',
 			},
