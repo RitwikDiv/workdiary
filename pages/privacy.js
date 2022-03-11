@@ -37,39 +37,41 @@ export default function PrivacyPolicy() {
 					justifyContent={'space-between'}
 					align='center'
 					spacing={4}>
-					<Button
-						variant='outline'
-						onClick={() => router.push('/account')}
-						leftIcon={<LeftIcon />}>
-						Go back home
-					</Button>
-					<Spacer />
 					<Image
 						src='logo.svg'
 						color='orange'
 						htmlHeight={'100px'}
 						alt='Workdiary Logo'
 						htmlWidth='100px'></Image>
+					<Spacer />
+					<Button
+						variant='outline'
+						onClick={() => router.push('/account')}
+						leftIcon={<LeftIcon />}>
+						Go back home
+					</Button>
 				</HStack>
-				<VStack align='start' spacing={4}>
-					<Text variant={'title'}>📜 Privacy Policy</Text>
-					<Text variant={'support'}>Last updated: February 23, 2022</Text>
-					<Text variant={'body'}>
-						This Privacy Policy describes Our policies and procedures on the
-						collection, use and disclosure of Your information when You use the
-						Service and tells You about Your privacy rights and how the law
-						protects You. We use Your Personal data to provide and improve the
-						Service. By using the Service, You agree to the collection and use
-						of information in accordance with this Privacy Policy. This Privacy
-						Policy has been created with the help of the{' '}
-						<Link
-							href='https://www.freeprivacypolicy.com/blog/sample-privacy-policy-template/'
-							isExternal>
-							Privacy Policy Template
-						</Link>
-						.
-					</Text>
-					<Accordion defaultIndex={[0]} allowToggle width={'100%'}>
+				<VStack align='start' spacing={6}>
+					<VStack align='center' spacing={2}>
+						<Text variant={'title'}>Privacy Policy</Text>
+						<Text variant={'support'}>Last updated: February 23, 2022</Text>
+						<Text variant={'body'}>
+							This Privacy Policy describes Our policies and procedures on the
+							collection, use and disclosure of Your information when You use
+							the Service and tells You about Your privacy rights and how the
+							law protects You. We use Your Personal data to provide and improve
+							the Service. By using the Service, You agree to the collection and
+							use of information in accordance with this Privacy Policy. This
+							Privacy Policy has been created with the help of the{' '}
+							<Link
+								href='https://www.freeprivacypolicy.com/blog/sample-privacy-policy-template/'
+								isExternal>
+								Privacy Policy Template
+							</Link>
+							.
+						</Text>
+					</VStack>
+					<Accordion defaultIndex={[0, 1, 2, 3, 4]} allowToggle width={'100%'}>
 						<AccordionItem>
 							<AccordionButton
 								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
@@ -77,7 +79,7 @@ export default function PrivacyPolicy() {
 								<AccordionIcon />
 							</AccordionButton>
 							<AccordionPanel>
-								<VStack spacing={4} align='start'>
+								<VStack spacing={2} align='start'>
 									<Text variant={'heading3'}>Interpretation</Text>
 									<Text variant={'body'}>
 										The words of which the initial letter is capitalized have
@@ -197,7 +199,7 @@ export default function PrivacyPolicy() {
 								<AccordionIcon />
 							</AccordionButton>
 							<AccordionPanel>
-								<VStack spacing={4} align='start'>
+								<VStack spacing={2} align='start'>
 									<Text variant={'heading3'}>Types of Data Collected</Text>
 									<Text variant={'heading4'}>Personal Data</Text>
 									<Text variant={'body'}>
@@ -605,7 +607,7 @@ export default function PrivacyPolicy() {
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
 							<AccordionPanel>
-								<VStack spacing={4}>
+								<VStack spacing={2}>
 									<Text variant={'body'}>
 										Our Service does not address anyone under the age of 13. We
 										do not knowingly collect personally identifiable information
@@ -632,7 +634,7 @@ export default function PrivacyPolicy() {
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
 							<AccordionPanel>
-								<VStack spacing={4}>
+								<VStack spacing={2}>
 									<Text variant={'body'}>
 										Our Service may contain links to other websites that are not
 										operated by Us. If You click on a third party link, You will
@@ -655,7 +657,7 @@ export default function PrivacyPolicy() {
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
 							<AccordionPanel>
-								<VStack spacing={4}>
+								<VStack spacing={2}>
 									<Text variant={'body'}>
 										We may update Our Privacy Policy from time to time. We will
 										notify You of any changes by posting the new Privacy Policy

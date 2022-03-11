@@ -19,8 +19,12 @@ export const theme = extendTheme({
 				_dark: 'gray.200',
 			},
 			textSecondary: {
-				default: 'gray.600',
-				_dark: 'gray.300',
+				default: 'gray.500',
+				_dark: 'gray.400',
+			},
+			sbBackground: {
+				default: 'white',
+				_dark: 'gray.700',
 			},
 		},
 	},
