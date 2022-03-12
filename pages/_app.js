@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { theme } from '../styles/theme';
 import { supabase } from '../utils/backend/supabaseClient';
 import Head from 'next/head';
+import { ColorModeScript } from '@chakra-ui/react';
 
 function MyApp({ Component, pageProps }) {
 	const router = useRouter();
@@ -32,10 +33,8 @@ function MyApp({ Component, pageProps }) {
 
 	return (
 		<>
-			<Head>
-				<meta charSet='UTF-8' />
-			</Head>
 			<ChakraProvider theme={theme}>
+				<ColorModeScript initialColorMode={theme.config.initialColorMode} />
 				<Component {...pageProps} />
 			</ChakraProvider>
 		</>

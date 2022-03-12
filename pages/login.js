@@ -109,7 +109,7 @@ export default function Login() {
 					name='keywords'
 					content='Workdiary, Login, Sign up, Get Started'></meta>
 			</Head>
-			<Container centerContent>
+			<Container maxWidth={'container.lg'} centerContent>
 				<Center height={'100vh'} width={'100vw'}>
 					<Stack spacing={4} width='350px'>
 						<VStack spacing={2}>
@@ -118,15 +118,13 @@ export default function Login() {
 								alt='Workdiary Logo'
 								htmlHeight={'100px'}
 								htmlWidth='100px'></Image>
-							<Text as='h1' fontSize='2xl' fontWeight='bold'>
-								👋 Welcome to Workdiary
-							</Text>
-							<Text as='p' fontSize='md' color={'gray.600'}>
+							<Text variant={'title'}>👋 Welcome to Workdiary</Text>
+							<Text variant={'body'}>
 								You don&apos;t need a password. It&apos;s safer that way.
 							</Text>
 						</VStack>
 						<VStack spacing={2} align='stretch'>
-							<FormControl>
+							<FormControl autoComplete='off'>
 								<InputGroup>
 									<Input
 										autoComplete='email'
@@ -145,15 +143,13 @@ export default function Login() {
 										)}
 									</InputRightElement>
 								</InputGroup>
-								<FormHelperText color='gray.600' fontSize={'sm'}>
+								<FormHelperText>
 									We&apos;ll never share your email
 								</FormHelperText>
 							</FormControl>
 							<Button
 								leftIcon={<BsStars color='orange' />}
 								variant={'solid'}
-								size='md'
-								colorScheme='purple'
 								isLoading={loading}
 								loadingText={'Sending ...'}
 								onClick={(e) => {
@@ -165,9 +161,7 @@ export default function Login() {
 						</VStack>
 						<HStack spacing={2}>
 							<Divider></Divider>
-							<Text fontSize='md' color={'gray.600'}>
-								or
-							</Text>
+							<Text variant={'body'}>or</Text>
 							<Divider></Divider>
 						</HStack>
 						<VStack spacing={2} align='stretch'>
@@ -175,8 +169,6 @@ export default function Login() {
 								<Button
 									key={oauth.name}
 									variant='outline'
-									color={'gray.600'}
-									size='md'
 									onClick={() => oauthLogin(oauth.name.toLowerCase())}
 									leftIcon={oauth.icon}>
 									Continue with {oauth.name}
@@ -186,11 +178,21 @@ export default function Login() {
 						<HStack spacing={2} justifyContent='center'>
 							<NextLink href='/privacy' passHref>
 								<Link
-									fontSize={'sm'}
+									fontSize={'md'}
 									fontWeight='semibold'
 									color='gray.600'
 									textDecoration={'underline'}>
 									Privacy Policy
+								</Link>
+							</NextLink>
+							<Text>&bull;</Text>
+							<NextLink href='/terms' passHref>
+								<Link
+									fontSize={'md'}
+									fontWeight='semibold'
+									color='gray.600'
+									textDecoration={'underline'}>
+									Terms & Conditions
 								</Link>
 							</NextLink>
 						</HStack>

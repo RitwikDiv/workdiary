@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { FiChevronLeft as LeftIcon } from 'react-icons/fi';
 
 export default function NotFound() {
 	const router = useRouter();
@@ -23,7 +24,7 @@ export default function NotFound() {
 			</Head>
 			<Container centerContent>
 				<Center height={'100vh'} width={'100vw'}>
-					<Stack spacing={4} width='350px' align={'stretch'}>
+					<Stack spacing={4} width='350px'>
 						<Center>
 							<Image
 								src='404.png'
@@ -32,23 +33,15 @@ export default function NotFound() {
 								htmlWidth={'200px'}></Image>
 						</Center>
 						<VStack spacing={2}>
-							<Text as='h1' fontSize='2xl' fontWeight='extrabold'>
-								🔍 Oops, are you lost?
-							</Text>
-							<Text
-								as='p'
-								fontSize='md'
-								color={'gray.500'}
-								fontWeight={'light'}
-								align='center'>
+							<Text variant={'title'}>Are you lost?</Text>
+							<Text variant={'body'} textAlign='center'>
 								We&apos;re sorry, but the page you are looking for has been
 								moved or does not exist.
 							</Text>
 						</VStack>
 						<Button
-							variant={'solid'}
-							colorScheme='purple'
-							size={'md'}
+							variant={'outline'}
+							leftIcon={<LeftIcon />}
 							onClick={() => {
 								router.push('/account');
 							}}>
