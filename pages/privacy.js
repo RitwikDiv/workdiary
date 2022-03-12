@@ -4,13 +4,10 @@ import {
 	AccordionIcon,
 	AccordionItem,
 	AccordionPanel,
-	Button,
 	Container,
-	HStack,
 	Image,
 	Link,
 	ListItem,
-	Spacer,
 	Text,
 	UnorderedList,
 	useColorModeValue,
@@ -18,10 +15,9 @@ import {
 } from '@chakra-ui/react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { FiChevronLeft as LeftIcon } from 'react-icons/fi';
+import SimpleNav from '../components/navbars/SimpleNav';
 
 export default function PrivacyPolicy() {
-	const router = useRouter();
 	return (
 		<>
 			<Head>
@@ -31,30 +27,17 @@ export default function PrivacyPolicy() {
 					content='Privacy Policy for Workdiary.app'></meta>
 				<meta name='keywords' content='Workdiary, Privacy, Policy'></meta>
 			</Head>
-			<Container maxWidth={'container.lg'} p='4'>
-				<HStack
-					width={'100%'}
-					justifyContent={'space-between'}
-					align='center'
-					spacing={4}>
-					<Image
-						src='logo.svg'
-						color='orange'
-						htmlHeight={'100px'}
-						alt='Workdiary Logo'
-						htmlWidth='100px'></Image>
-					<Spacer />
-					<Button
-						variant='outline'
-						onClick={() => router.push('/account')}
-						leftIcon={<LeftIcon />}>
-						Go back home
-					</Button>
-				</HStack>
-				<VStack align='start' spacing={6}>
-					<VStack align='center' spacing={2}>
+			<Container maxWidth={'container.lg'}>
+				<SimpleNav />
+				<VStack align='start' spacing={4}>
+					<VStack align={'center'} spacing={2}>
 						<Text variant={'title'}>Privacy Policy</Text>
 						<Text variant={'support'}>Last updated: February 23, 2022</Text>
+						<Image
+							src='privacy.png'
+							alt='Privacy Policy Image'
+							htmlHeight={'300px'}
+							htmlWidth={'300px'}></Image>
 						<Text variant={'body'}>
 							This Privacy Policy describes Our policies and procedures on the
 							collection, use and disclosure of Your information when You use
@@ -71,7 +54,7 @@ export default function PrivacyPolicy() {
 							.
 						</Text>
 					</VStack>
-					<Accordion defaultIndex={[0, 1, 2, 3, 4]} allowToggle width={'100%'}>
+					<Accordion defaultIndex={[0]} allowToggle width={'100%'}>
 						<AccordionItem>
 							<AccordionButton
 								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
@@ -675,6 +658,21 @@ export default function PrivacyPolicy() {
 										effective when they are posted on this page.
 									</Text>
 								</VStack>
+							</AccordionPanel>
+						</AccordionItem>
+						<AccordionItem>
+							<AccordionButton
+								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
+								<Text variant={'heading2'}>Contacting us</Text>
+								<AccordionIcon />
+							</AccordionButton>
+							<AccordionPanel>
+								<Text variant='body'>
+									If you have any questions, concerns, or complaints regarding
+									this privacy policy, we encourage you to contact us using the
+									details below:
+									privacy.w&#111;r&#107;&#100;i&#97;r&#121;&#64;&#103;m&#97;&#105;&#108;.co&#109;
+								</Text>
 							</AccordionPanel>
 						</AccordionItem>
 					</Accordion>

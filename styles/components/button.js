@@ -2,18 +2,7 @@ const Button = {
 	baseStyle: {
 		fontWeight: 'bold',
 	},
-	sizes: {
-		sm: {
-			fontSize: 'sm',
-			px: 4,
-			py: 3,
-		},
-		md: {
-			fontSize: 'md',
-			px: 6,
-			py: 4,
-		},
-	},
+
 	variants: {
 		outline: {
 			default: {
@@ -45,7 +34,7 @@ const Button = {
 		},
 	},
 	defaultProps: {
-		size: 'md',
+		// size: 'md',
 		variant: 'outline',
 	},
 };

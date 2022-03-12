@@ -109,7 +109,7 @@ export default function Login() {
 					name='keywords'
 					content='Workdiary, Login, Sign up, Get Started'></meta>
 			</Head>
-			<Container centerContent>
+			<Container maxWidth={'container.lg'} centerContent>
 				<Center height={'100vh'} width={'100vw'}>
 					<Stack spacing={4} width='350px'>
 						<VStack spacing={2}>
@@ -183,6 +183,16 @@ export default function Login() {
 									color='gray.600'
 									textDecoration={'underline'}>
 									Privacy Policy
+								</Link>
+							</NextLink>
+							<Text>&bull;</Text>
+							<NextLink href='/terms' passHref>
+								<Link
+									fontSize={'md'}
+									fontWeight='semibold'
+									color='gray.600'
+									textDecoration={'underline'}>
+									Terms & Conditions
 								</Link>
 							</NextLink>
 						</HStack>
