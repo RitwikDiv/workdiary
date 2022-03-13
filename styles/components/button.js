@@ -23,18 +23,8 @@ const Button = {
 				bg: 'purple.600',
 			},
 		},
-		menu: {
-			color: 'textPrimary',
-			fontSize: 'semibold',
-			justifyContent: 'flex-start',
-			_hover: {
-				borderColor: 'gray.300',
-				bg: 'purple.50',
-			},
-		},
 	},
 	defaultProps: {
-		// size: 'md',
 		variant: 'outline',
 	},
 };

@@ -1,11 +1,8 @@
 import { supabase } from '../utils/backend/supabaseClient';
+import { Text } from '@chakra-ui/react';
 
 export default function Account({ user }) {
-	return (
-		<div style={{ maxWidth: '420px', margin: '96px auto' }}>
-			<h2>Hello from protected {user.email}</h2>
-		</div>
-	);
+	return <Text variant='title'>Hello from protected {user.email}</Text>;
 }
 
 export async function getServerSideProps({ req }) {

@@ -5,11 +5,13 @@ import {
 	Text,
 	VStack,
 	Image,
-	Stack,
+	Flex,
 } from '@chakra-ui/react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { FiChevronLeft as LeftIcon } from 'react-icons/fi';
+import SimpleFooter from '../components/footers/SimpleFooter';
+import SimpleNav from '../components/navbars/SimpleNav';
 
 export default function NotFound() {
 	const router = useRouter();
@@ -22,16 +24,15 @@ export default function NotFound() {
 					content='404 - Page Not Found Workdiary.app'></meta>
 				<meta name='keywords' content='Workdiary, 404, page not found'></meta>
 			</Head>
+			<SimpleNav></SimpleNav>
 			<Container centerContent>
-				<Center height={'100vh'} width={'100vw'}>
-					<Stack spacing={4} width='350px'>
-						<Center>
-							<Image
-								src='404.png'
-								alt='404 Page Not Found'
-								htmlHeight={'200px'}
-								htmlWidth={'200px'}></Image>
-						</Center>
+				<Center height={'78vh'}>
+					<VStack spacing={4} width='300px'>
+						<Image
+							src='404.png'
+							alt='404 Page Not Found'
+							htmlHeight={'200px'}
+							htmlWidth={'200px'}></Image>
 						<VStack spacing={2}>
 							<Text variant={'title'}>Are you lost?</Text>
 							<Text variant={'body'} textAlign='center'>
@@ -47,9 +48,10 @@ export default function NotFound() {
 							}}>
 							Go back home
 						</Button>
-					</Stack>
+					</VStack>
 				</Center>
 			</Container>
+			<SimpleFooter></SimpleFooter>
 		</>
 	);
 }

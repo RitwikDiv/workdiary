@@ -7,15 +7,13 @@ import {
 	Container,
 	Image,
 	Link,
-	ListItem,
 	Text,
-	UnorderedList,
 	useColorModeValue,
 	VStack,
 } from '@chakra-ui/react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import SimpleNav from '../components/navbars/SimpleNav';
+import SimpleFooter from '../components/footers/SimpleFooter';
 
 export default function PrivacyPolicy() {
 	return (
@@ -29,8 +27,8 @@ export default function PrivacyPolicy() {
 					name='keywords'
 					content='Workdiary, Terms, Conditions, terms of service'></meta>
 			</Head>
+			<SimpleNav />
 			<Container maxWidth={'container.lg'}>
-				<SimpleNav />
 				<VStack align='start' spacing={4}>
 					<VStack align={'center'} spacing={2}>
 						<Text variant={'title'}>Terms & Conditions</Text>
@@ -39,7 +37,7 @@ export default function PrivacyPolicy() {
 							src='terms.png'
 							alt='Terms & Conditions Image'
 							htmlHeight={'200px'}
-							htmlWidth={'250px'}></Image>
+							htmlWidth={'220px'}></Image>
 						<Text variant='body'>
 							These terms and conditions (“Agreement”) set forth the general
 							terms and conditions of your use of the{' '}
@@ -71,7 +69,7 @@ export default function PrivacyPolicy() {
 							.
 						</Text>
 					</VStack>
-					<Accordion allowToggle width={'100%'}>
+					<Accordion defaultIndex={[0]} allowToggle width={'100%'}>
 						<AccordionItem>
 							<AccordionButton
 								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
@@ -290,6 +288,7 @@ export default function PrivacyPolicy() {
 					</Accordion>
 				</VStack>
 			</Container>
+			<SimpleFooter />
 		</>
 	);
 }
