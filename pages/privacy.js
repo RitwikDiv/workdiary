@@ -16,6 +16,7 @@ import {
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import SimpleNav from '../components/navbars/SimpleNav';
+import SimpleFooter from '../components/footers/SimpleFooter';
 
 export default function PrivacyPolicy() {
 	return (
@@ -27,8 +28,8 @@ export default function PrivacyPolicy() {
 					content='Privacy Policy for Workdiary.app'></meta>
 				<meta name='keywords' content='Workdiary, Privacy, Policy'></meta>
 			</Head>
+			<SimpleNav />
 			<Container maxWidth={'container.lg'}>
-				<SimpleNav />
 				<VStack align='start' spacing={4}>
 					<VStack align={'center'} spacing={2}>
 						<Text variant={'title'}>Privacy Policy</Text>
@@ -678,6 +679,7 @@ export default function PrivacyPolicy() {
 					</Accordion>
 				</VStack>
 			</Container>
+			<SimpleFooter />
 		</>
 	);
 }
