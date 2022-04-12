@@ -1,10 +1,10 @@
-import {
-	BsSunFill as SunIcon,
-	BsFillMoonStarsFill as MoonIcon,
-} from 'react-icons/bs';
 import { IconButton } from '@chakra-ui/button';
 import { useColorMode } from '@chakra-ui/color-mode';
 import { Tooltip } from '@chakra-ui/react';
+import {
+	BsMoonStarsFill as MoonIcon,
+	BsSunFill as SunIcon,
+} from 'react-icons/bs';
 
 export default function DarkModeToggle() {
 	const { colorMode, toggleColorMode } = useColorMode();
