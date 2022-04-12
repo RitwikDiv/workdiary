@@ -1,6 +1,8 @@
 const Button = {
 	baseStyle: {
 		fontWeight: 'bold',
+		boxShadow: 'xs',
+		rounded: 'lg',
 	},
 
 	variants: {
@@ -14,6 +16,13 @@ const Button = {
 				border: '1px solid',
 				borderColor: 'gray.600',
 				color: 'textSecondary',
+			},
+		},
+		menu: {
+			color: 'textPrimary',
+			_hover: {
+				bg: 'gray.700',
+				color: 'gray.200',
 			},
 		},
 		solid: {

@@ -1,10 +1,22 @@
 const Link = {
 	baseStyle: {
 		color: 'textPrimary',
-		fontWeight: 'bold',
+		fontWeight: 'semibold',
 		textDecoration: 'underline',
 		_hover: {
 			color: 'primary',
+		},
+	},
+	variants: {
+		footer: {
+			color: 'textPrimary',
+			fontWeight: 'semibold',
+			fontSize: 'sm',
+			textDecoration: 'none',
+			_hover: {
+				color: 'primary',
+				textDecoration: 'underline',
+			},
 		},
 	},
 	sizes: {
