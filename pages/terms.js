@@ -12,7 +12,7 @@ import {
 	VStack,
 } from '@chakra-ui/react';
 import Head from 'next/head';
-import SimpleNav from '../components/navbars/SimpleNav';
+import HomeNav from '../components/navbars/HomeNav';
 import SimpleFooter from '../components/footers/SimpleFooter';
 
 export default function PrivacyPolicy() {
@@ -27,17 +27,17 @@ export default function PrivacyPolicy() {
 					name='keywords'
 					content='Workdiary, Terms, Conditions, terms of service'></meta>
 			</Head>
-			<SimpleNav />
-			<Container maxWidth={'container.lg'}>
+			<HomeNav />
+			<Container maxWidth={'container.xl'}>
 				<VStack align='start' spacing={4}>
 					<VStack align={'center'} spacing={2}>
 						<Text variant={'title'}>Terms & Conditions</Text>
 						<Text variant={'support'}>Last updated: March 11, 2022</Text>
 						<Image
-							src='terms.png'
+							src='images/terms.png'
 							alt='Terms & Conditions Image'
 							htmlHeight={'200px'}
-							htmlWidth={'220px'}></Image>
+							htmlWidth={'200px'}></Image>
 						<Text variant='body'>
 							These terms and conditions (“Agreement”) set forth the general
 							terms and conditions of your use of the{' '}
@@ -69,7 +69,10 @@ export default function PrivacyPolicy() {
 							.
 						</Text>
 					</VStack>
-					<Accordion defaultIndex={[0]} allowToggle width={'100%'}>
+					<Accordion
+						defaultIndex={[0, 1, 2, 3, 4, 5, 6, 7, 8]}
+						allowToggle
+						width={'100%'}>
 						<AccordionItem>
 							<AccordionButton
 								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>

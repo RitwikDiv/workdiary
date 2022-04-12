@@ -109,7 +109,7 @@ export default function Login() {
 					name='keywords'
 					content='Workdiary, Login, Sign up, Get Started'></meta>
 			</Head>
-			<Container maxWidth={'container.lg'} centerContent>
+			<Container maxWidth={'container.xl'} centerContent>
 				<Center height={'100vh'} width={'100vw'}>
 					<Stack spacing={4} width='350px'>
 						<VStack spacing={2}>
@@ -144,7 +144,7 @@ export default function Login() {
 									</InputRightElement>
 								</InputGroup>
 								<FormHelperText>
-									We&apos;ll never share your email
+									We&apos;ll never share your personal information
 								</FormHelperText>
 							</FormControl>
 							<Button
@@ -177,23 +177,11 @@ export default function Login() {
 						</VStack>
 						<HStack spacing={2} justifyContent='center'>
 							<NextLink href='/privacy' passHref>
-								<Link
-									fontSize={'md'}
-									fontWeight='semibold'
-									color='gray.600'
-									textDecoration={'underline'}>
-									Privacy Policy
-								</Link>
+								<Link>Privacy Policy</Link>
 							</NextLink>
 							<Text>&bull;</Text>
 							<NextLink href='/terms' passHref>
-								<Link
-									fontSize={'md'}
-									fontWeight='semibold'
-									color='gray.600'
-									textDecoration={'underline'}>
-									Terms & Conditions
-								</Link>
+								<Link>Terms & Conditions</Link>
 							</NextLink>
 						</HStack>
 					</Stack>

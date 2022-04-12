@@ -1,8 +1,10 @@
 import { supabase } from '../utils/backend/supabaseClient';
 import { Text } from '@chakra-ui/react';
+import { useEffect } from 'react';
 
 export default function Account({ user }) {
 	return <Text variant='title'>Hello from protected {user.email}</Text>;
+	
 }
 
 export async function getServerSideProps({ req }) {

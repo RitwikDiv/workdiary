@@ -14,8 +14,7 @@ import {
 	VStack,
 } from '@chakra-ui/react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import SimpleNav from '../components/navbars/SimpleNav';
+import HomeNav from '../components/navbars/HomeNav';
 import SimpleFooter from '../components/footers/SimpleFooter';
 
 export default function PrivacyPolicy() {
@@ -28,17 +27,17 @@ export default function PrivacyPolicy() {
 					content='Privacy Policy for Workdiary.app'></meta>
 				<meta name='keywords' content='Workdiary, Privacy, Policy'></meta>
 			</Head>
-			<SimpleNav />
-			<Container maxWidth={'container.lg'}>
+			<HomeNav />
+			<Container maxWidth={'container.xl'}>
 				<VStack align='start' spacing={4}>
 					<VStack align={'center'} spacing={2}>
 						<Text variant={'title'}>Privacy Policy</Text>
 						<Text variant={'support'}>Last updated: February 23, 2022</Text>
 						<Image
-							src='privacy.png'
+							src='images/privacy.png'
 							alt='Privacy Policy Image'
-							htmlHeight={'300px'}
-							htmlWidth={'300px'}></Image>
+							htmlHeight={'200px'}
+							htmlWidth={'200px'}></Image>
 						<Text variant={'body'}>
 							This Privacy Policy describes Our policies and procedures on the
 							collection, use and disclosure of Your information when You use
@@ -55,7 +54,10 @@ export default function PrivacyPolicy() {
 							.
 						</Text>
 					</VStack>
-					<Accordion defaultIndex={[0]} allowToggle width={'100%'}>
+					<Accordion
+						defaultIndex={[0, 1, 2, 3, 4, 5]}
+						allowToggle
+						width={'100%'}>
 						<AccordionItem>
 							<AccordionButton
 								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
@@ -618,7 +620,7 @@ export default function PrivacyPolicy() {
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
 							<AccordionPanel>
-								<VStack spacing={2}>
+								<VStack spacing={2} align='start'>
 									<Text variant={'body'}>
 										Our Service may contain links to other websites that are not
 										operated by Us. If You click on a third party link, You will
@@ -641,7 +643,7 @@ export default function PrivacyPolicy() {
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
 							<AccordionPanel>
-								<VStack spacing={2}>
+								<VStack spacing={2} align='start'>
 									<Text variant={'body'}>
 										We may update Our Privacy Policy from time to time. We will
 										notify You of any changes by posting the new Privacy Policy
