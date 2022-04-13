@@ -2,18 +2,16 @@ const Button = {
 	baseStyle: {
 		fontWeight: 'bold',
 		boxShadow: 'xs',
-		rounded: 'lg',
+		rounded: 'md',
 	},
 
 	variants: {
 		outline: {
 			default: {
-				border: '1px solid',
 				borderColor: 'gray.300',
 				color: 'textSecondary',
 			},
 			_dark: {
-				border: '1px solid',
 				borderColor: 'gray.600',
 				color: 'textSecondary',
 			},

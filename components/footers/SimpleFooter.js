@@ -1,5 +1,11 @@
-import { IconButton, Spacer, Container, Stack, Link } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
+import {
+	IconButton,
+	Spacer,
+	Container,
+	Stack,
+	Link,
+	useBreakpointValue,
+} from '@chakra-ui/react';
 import { BsDiscord as Discord, BsLinkedin as LinkedIn } from 'react-icons/bs';
 import NextLink from 'next/link';
 
@@ -31,15 +37,17 @@ export default function SimpleFooter() {
 			path: '/login',
 		},
 	];
-	const router = useRouter();
-
+	const direction = useBreakpointValue({
+		base: 'column',
+		md: 'row',
+	});
 	return (
 		<Container
 			maxWidth={'container.xl'}
 			marginTop={5}
 			bottom={0}
 			marginBottom={5}>
-			<Stack flexWrap={'wrap'} align='center' direction={'row'}>
+			<Stack flexWrap={'wrap'} align='center' direction={direction}>
 				<Stack direction={'row'} spacing={3} align='center'>
 					{pagesList.map((pageItem) => {
 						return (

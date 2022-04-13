@@ -110,7 +110,7 @@ export default function Login() {
 					content='Workdiary, Login, Sign up, Get Started'></meta>
 			</Head>
 			<Container maxWidth={'container.xl'} centerContent>
-				<Center height={'100vh'} width={'100vw'}>
+				<Center height={'100vh'} maxWidth={'container.sm'}>
 					<Stack spacing={4} width='350px'>
 						<VStack spacing={2}>
 							<Image
