@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { theme } from '../styles/theme';
 import { supabase } from '../utils/backend/supabaseClient';
-import Head from 'next/head';
 import { ColorModeScript } from '@chakra-ui/react';
 
 function MyApp({ Component, pageProps }) {
