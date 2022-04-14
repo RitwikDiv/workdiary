@@ -8,11 +8,11 @@ const Button = {
 	variants: {
 		outline: {
 			default: {
-				borderColor: 'gray.300',
+				borderWidth: '0.5',
+				boxShadow: 'xs',
 				color: 'textSecondary',
 			},
 			_dark: {
-				borderColor: 'gray.600',
 				color: 'textSecondary',
 			},
 		},

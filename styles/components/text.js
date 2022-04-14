@@ -32,7 +32,7 @@ const Text = {
 			as: 'p',
 			fontSize: 'sm',
 			fontWeight: 'semibold',
-			color: 'textTeritiary',
+			color: 'textSecondary',
 		},
 	},
 	defaultProps: {
