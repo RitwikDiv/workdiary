@@ -29,6 +29,12 @@ import {
 	TabPanels,
 	Tab,
 	TabPanel,
+	Accordion,
+	AccordionButton,
+	AccordionIcon,
+	AccordionItem,
+	AccordionPanel,
+	Spacer,
 } from '@chakra-ui/react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -39,7 +45,7 @@ import {
 	BsBookFill as Book,
 	BsBookmarksFill as Books,
 	BsBriefcaseFill as Briefcase,
-	BsCheckCircleFill as Check,
+	BsCheckSquareFill as Check,
 	BsFillChatFill as Chat,
 	BsPlusLg as Plus,
 	BsStars as Party,
@@ -70,7 +76,7 @@ export default function Home() {
 	return (
 		<div>
 			<Head>
-				<title>WorkDiary Home</title>
+				<title>WorkDiary</title>
 				<meta name='description' content='Track your work properly' />
 				<meta
 					name='description'
@@ -127,11 +133,7 @@ export default function Home() {
 							</Button>
 						</VStack>
 						<Divider></Divider>
-						<VStack
-							maxWidth={'container.xl'}
-							align={'center'}
-							spacing={5}
-							marginBottom={20}>
+						<VStack maxWidth={'container.xl'} align={'center'} spacing={4}>
 							<Text fontSize='xs' color='primary' fontWeight={'extrabold'}>
 								FEATURES
 							</Text>
@@ -164,10 +166,9 @@ export default function Home() {
 											<Checkbox
 												colorScheme={'purple'}
 												isChecked={checked}
+												as={checked === true ? 's' : ''}
 												onChange={(e) => setChecked(!checked)}>
-												<Text
-													variant='support'
-													as={checked === true ? 's' : ''}>
+												<Text variant='support'>
 													Create a pull-request into the main git branch
 												</Text>
 											</Checkbox>
@@ -359,7 +360,7 @@ export default function Home() {
 						</VStack>
 						<Divider></Divider>
 						<VStack
-							maxWidth={'container.md'}
+							maxWidth={'container.xl'}
 							align={'center'}
 							spacing={4}
 							marginBottom={20}>
@@ -370,10 +371,70 @@ export default function Home() {
 								variant={'title'}
 								fontSize='xl'
 								color={'textPrimary'}
-								width={400}
 								align={'center'}>
 								Still got any more questions?
 							</Text>
+							<Accordion allowToggle width={'container.lg'}>
+								<AccordionItem>
+									<AccordionButton>
+										<Text variant={'body'} fontWeight={'extrabold'}>
+											Why is it free?
+										</Text>
+										<Spacer></Spacer>
+										<AccordionIcon />
+									</AccordionButton>
+									<AccordionPanel>
+										<Text variant='body'>
+											We&apos;re building WorkDiary for ourselves, because we
+											feel something is missing as we enter the workforce. We
+											need a holistic application that helps us fully capture
+											and communicate our work.{' '}
+											<Text as='span'>
+												<u>We don&apos;t sell your information to anyone.</u>
+											</Text>
+										</Text>
+									</AccordionPanel>
+								</AccordionItem>
+								<AccordionItem>
+									<AccordionButton>
+										<Text variant={'body'} fontWeight={'extrabold'}>
+											Why do I need WorkDiary?
+										</Text>
+										<Spacer></Spacer>
+										<AccordionIcon />
+									</AccordionButton>
+									<AccordionPanel>
+										<Text variant='body'>
+											WorkDiary helps us stay on top of our tasks and perform
+											better each day, making you feel more prepared and
+											confident at work. It also guides you to develop a
+											sustainable habit of reflecting and gaining feedback.
+										</Text>
+									</AccordionPanel>
+								</AccordionItem>
+								<AccordionItem>
+									<AccordionButton>
+										<Text variant={'body'} fontWeight={'extrabold'}>
+											How will WorkDiary help me succeed in the workforce?
+										</Text>
+										<Spacer></Spacer>
+										<AccordionIcon />
+									</AccordionButton>
+									<AccordionPanel>
+										<Text variant='body'>
+											Through weekly reflection and personal feedback, WorkDiary
+											increase your self-awareness. It&apos;s extremely easy to
+											track past achievements and personal development.
+											Observing day-to-day professional growth will increase
+											your motivation and passion for your job. And the best
+											part - everything is accurately tracked through metrics,
+											making it easy to craft the perfect resume and shine
+											during the end-of-year evaluations, putting you a leg
+											above the competition for future interviews.
+										</Text>
+									</AccordionPanel>
+								</AccordionItem>
+							</Accordion>
 						</VStack>
 					</VStack>
 				</Container>
