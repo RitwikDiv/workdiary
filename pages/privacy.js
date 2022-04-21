@@ -59,8 +59,7 @@ export default function PrivacyPolicy() {
 						allowToggle
 						width={'100%'}>
 						<AccordionItem>
-							<AccordionButton
-								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
+							<AccordionButton>
 								<Text variant={'heading2'}>Interpretation and Definitions</Text>
 								<AccordionIcon />
 							</AccordionButton>
@@ -177,8 +176,7 @@ export default function PrivacyPolicy() {
 							</AccordionPanel>
 						</AccordionItem>
 						<AccordionItem>
-							<AccordionButton
-								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
+							<AccordionButton>
 								<Text variant={'heading2'}>
 									Collecting and Using Personal Data
 								</Text>
@@ -587,8 +585,7 @@ export default function PrivacyPolicy() {
 							</AccordionPanel>
 						</AccordionItem>
 						<AccordionItem>
-							<AccordionButton
-								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
+							<AccordionButton>
 								<Text variant={'heading2'}>Children&apos;s Privacy</Text>
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
@@ -614,8 +611,7 @@ export default function PrivacyPolicy() {
 							</AccordionPanel>
 						</AccordionItem>
 						<AccordionItem>
-							<AccordionButton
-								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
+							<AccordionButton>
 								<Text variant={'heading2'}>Links to Other Websites</Text>
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
@@ -637,8 +633,7 @@ export default function PrivacyPolicy() {
 							</AccordionPanel>
 						</AccordionItem>
 						<AccordionItem>
-							<AccordionButton
-								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
+							<AccordionButton>
 								<Text variant={'heading2'}>Changes to this Privacy Policy</Text>
 								<AccordionIcon></AccordionIcon>
 							</AccordionButton>
@@ -664,8 +659,7 @@ export default function PrivacyPolicy() {
 							</AccordionPanel>
 						</AccordionItem>
 						<AccordionItem>
-							<AccordionButton
-								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
+							<AccordionButton>
 								<Text variant={'heading2'}>Contacting us</Text>
 								<AccordionIcon />
 							</AccordionButton>

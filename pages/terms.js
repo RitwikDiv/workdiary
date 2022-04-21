@@ -74,8 +74,7 @@ export default function PrivacyPolicy() {
 						allowToggle
 						width={'100%'}>
 						<AccordionItem>
-							<AccordionButton
-								_expanded={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
+							<AccordionButton>
 								<Text variant={'heading2'}>Accounts and membership</Text>
 								<AccordionIcon />
 							</AccordionButton>

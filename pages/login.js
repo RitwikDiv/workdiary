@@ -127,6 +127,7 @@ export default function Login() {
 							<FormControl autoComplete='off'>
 								<InputGroup>
 									<Input
+										isInvalid={!valid}
 										autoComplete='email'
 										id='email'
 										type='email'
