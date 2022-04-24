@@ -64,12 +64,12 @@ export default function Home() {
 	const [totalTasks, setTotalTasks] = useState(68);
 
 	useEffect(() => {
-		if (checked) setTotalTasks(68);
-		else setTotalTasks(67);
+		if (checked) setTotalTasks(69);
+		else setTotalTasks(68);
 	}, [checked, totalTasks]);
 
 	const [skills, setSkills] = useState([
-		{ name: 'User Interviews', selected: true },
+		{ name: 'Customer Journey Mapping', selected: true },
 		{ name: 'Figma', selected: true },
 		{ name: 'Adobe XD', selected: false },
 	]);
@@ -90,6 +90,7 @@ export default function Home() {
 				<HomeNav></HomeNav>
 				<Container
 					maxWidth={'container.xl'}
+					minWidth={'container.xs'}
 					centerContent
 					marginTop={20}
 					marginBottom={20}>
@@ -98,8 +99,8 @@ export default function Home() {
 							<Image
 								src='images/home.png'
 								alt='Home Image'
-								htmlHeight={'250px'}
-								htmlWidth={'250px'}></Image>
+								htmlHeight={'300px'}
+								htmlWidth={'300px'}></Image>
 							<Text
 								variant='body'
 								fontSize={'lg'}
@@ -155,11 +156,11 @@ export default function Home() {
 											fontWeight={'semibold'}
 											color='textPrimary'
 											align={'start'}>
-											Keep track of all of your work!
+											Keep track of all your work
 										</Text>
 										<Text variant='support' align={'start'}>
-											A task-manager helps you keep track of your tasks and
-											sub-tasks for each project!
+											A task-manager helps you break down your projects into
+											sub-tasks to help you stay organized
 										</Text>
 										<Divider></Divider>
 										<Stack direction='row' variant='support' align={'start'}>
@@ -183,11 +184,11 @@ export default function Home() {
 											fontWeight={'semibold'}
 											color='textPrimary'
 											align={'start'}>
-											Keep track of your skill progression
+											Track your skill progression
 										</Text>
 										<Text variant='support' lineHeight={'tall'} align={'start'}>
-											Track of all of the hard and soft skills you employed to
-											finish a task
+											Identify the hard and soft skills you employed to finish a
+											task and observe your progression over time
 										</Text>
 										<Divider></Divider>
 										<Text variant='support' lineHeight={'tall'} align={'start'}>
@@ -215,8 +216,8 @@ export default function Home() {
 											Celebrate all of your achievements
 										</Text>
 										<Text variant='support' lineHeight={'tall'} align={'start'}>
-											Celebrating increases the satisfaction you experience and
-											motivates you{' '}
+											Celebrate accomplishments to increase motivation and
+											satisfaction in your role
 										</Text>
 										<Divider></Divider>
 										<Text variant='support' lineHeight={'tall'} align={'start'}>
@@ -250,7 +251,8 @@ export default function Home() {
 											View your productivity statistics
 										</Text>
 										<Text variant='support' lineHeight={'tall'} align={'start'}>
-											Track important stats to further boost productivity.
+											Unique metrics make it easy to view how you&apos;re doing
+											on a daily basis
 										</Text>
 										<Divider></Divider>
 										<StatGroup w={'full'}>
@@ -285,11 +287,11 @@ export default function Home() {
 											fontWeight={'semibold'}
 											color='textPrimary'
 											align={'start'}>
-											Quantify your impact with custom metrics
+											Quantify your progress with custom metrics
 										</Text>
 										<Text variant='support' lineHeight={'tall'} align={'start'}>
-											Create custom metric sliders and actively keep track of
-											your progress.
+											Create dynamic sliders for every task to actively keep
+											track of your progress
 										</Text>
 										<Divider marginBottom={5}></Divider>
 										<Slider
@@ -321,10 +323,10 @@ export default function Home() {
 											fontWeight={'semibold'}
 											color='textPrimary'
 											align={'start'}>
-											Get personal feedback for growth
+											Get feedback for personal growth
 										</Text>
 										<Text variant='support' lineHeight={'tall'} align={'start'}>
-											Get step-by-step guides for your weaknesses
+											Step-by-step solutions for your specific needs
 										</Text>
 										{/* <Divider></Divider> */}
 										<Tabs
@@ -374,14 +376,15 @@ export default function Home() {
 								align={'center'}>
 								Still got any more questions?
 							</Text>
-							<Accordion allowToggle width={'container.lg'}>
-								<AccordionItem>
+							<Accordion
+								defaultIndex={[0, 1, 2]}
+								minWidth={'container.xs'}
+								maxWidth={'container.lg'}>
+								<AccordionItem p={1}>
 									<AccordionButton>
 										<Text variant={'body'} fontWeight={'extrabold'}>
 											Why is it free?
 										</Text>
-										<Spacer></Spacer>
-										<AccordionIcon />
 									</AccordionButton>
 									<AccordionPanel>
 										<Text variant='body'>
@@ -395,42 +398,24 @@ export default function Home() {
 										</Text>
 									</AccordionPanel>
 								</AccordionItem>
-								<AccordionItem>
+								<AccordionItem p={1}>
 									<AccordionButton>
 										<Text variant={'body'} fontWeight={'extrabold'}>
 											Why do I need WorkDiary?
 										</Text>
-										<Spacer></Spacer>
-										<AccordionIcon />
 									</AccordionButton>
 									<AccordionPanel>
 										<Text variant='body'>
-											WorkDiary helps us stay on top of our tasks and perform
+											WorkDiary helps you stay on top of our tasks and perform
 											better each day, making you feel more prepared and
-											confident at work. It also guides you to develop a
-											sustainable habit of reflecting and gaining feedback.
-										</Text>
-									</AccordionPanel>
-								</AccordionItem>
-								<AccordionItem>
-									<AccordionButton>
-										<Text variant={'body'} fontWeight={'extrabold'}>
-											How will WorkDiary help me succeed in the workforce?
-										</Text>
-										<Spacer></Spacer>
-										<AccordionIcon />
-									</AccordionButton>
-									<AccordionPanel>
-										<Text variant='body'>
-											Through weekly reflection and personal feedback, WorkDiary
-											increase your self-awareness. It&apos;s extremely easy to
-											track past achievements and personal development.
-											Observing day-to-day professional growth will increase
-											your motivation and passion for your job. And the best
-											part - everything is accurately tracked through metrics,
-											making it easy to craft the perfect resume and shine
-											during the end-of-year evaluations, putting you a leg
-											above the competition for future interviews.
+											confident at work. It also guides you to develop the
+											sustainable habit of reflecting and gaining feedback,
+											increasing self-awareness. It&apos;s extremely easy to
+											track past achievements and personal development. And the
+											best part – everything is accurately tracked through
+											metrics, making it easy to craft the perfect resume and
+											shine during the end-of-year evaluations, putting you a
+											leg above the competition for future interviews.
 										</Text>
 									</AccordionPanel>
 								</AccordionItem>

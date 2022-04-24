@@ -8,7 +8,7 @@ const Button = {
 	variants: {
 		outline: {
 			default: {
-				borderWidth: '0.5',
+				// width: '1px',
 				boxShadow: 'xs',
 				color: 'textSecondary',
 			},

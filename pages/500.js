@@ -10,7 +10,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { FiChevronLeft as LeftIcon } from 'react-icons/fi';
 
-export default function NotFound() {
+export default function ServerDown() {
 	const router = useRouter();
 	return (
 		<>
@@ -25,15 +25,15 @@ export default function NotFound() {
 				<Center height={'100vh'}>
 					<VStack spacing={4} width='350px'>
 						<Image
-							src='images/404.png'
-							alt='404 Page Not Found'
+							src='images/500.png'
+							alt='Internal Server Error'
 							htmlHeight={'250px'}
 							htmlWidth={'250px'}></Image>
 						<VStack spacing={2}>
-							<Text variant={'title'}>Are you lost?</Text>
+							<Text variant={'title'}>We f****d up!</Text>
 							<Text variant={'body'} textAlign='center'>
-								We&apos;re sorry, but the page you are looking for has been
-								moved or does not exist.
+								Oops, an error has occurred on our end and we are trying to fix
+								it as soon as we can.
 							</Text>
 						</VStack>
 						<Button
