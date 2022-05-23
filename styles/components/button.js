@@ -1,15 +1,13 @@
 const Button = {
 	baseStyle: {
 		fontWeight: 'bold',
-		boxShadow: 'xs',
 		rounded: 'md',
 	},
 
 	variants: {
 		outline: {
 			default: {
-				// width: '1px',
-				boxShadow: 'xs',
+				width: '2px',
 				color: 'textSecondary',
 			},
 			_dark: {

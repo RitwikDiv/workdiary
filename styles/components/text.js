@@ -6,7 +6,7 @@ const Text = {
 		title: {
 			as: 'h1',
 			fontSize: '2xl',
-			fontWeight: '700',
+			fontWeight: '800',
 		},
 		heading2: {
 			as: 'h2',
