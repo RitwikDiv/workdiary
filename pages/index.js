@@ -147,9 +147,9 @@ export default function Home() {
 							</Text>
 							<SimpleGrid
 								columns={useBreakpointValue({ base: 1, sm: 1, md: 2, lg: 3 })}
-								spacing={5}>
-								<Box borderWidth={0.5} boxShadow={'sm'} borderRadius={'lg'}>
-									<VStack spacing={2} align={'start'} p={5}>
+								spacing={4}>
+								<Box borderWidth={0.5} boxShadow={'xs'} borderRadius={'md'}>
+									<VStack p={4} spacing={2} align={'start'}>
 										<Icon as={Check} h={6} w={6} color='purple.500' />
 										<Text
 											variant='body'
@@ -176,8 +176,8 @@ export default function Home() {
 										</Stack>
 									</VStack>
 								</Box>
-								<Box borderWidth={0.5} boxShadow={'sm'} borderRadius={'lg'}>
-									<VStack p={5} spacing={2} align={'start'}>
+								<Box borderWidth={0.5} boxShadow={'xs'} borderRadius={'md'}>
+									<VStack p={4} spacing={2} align={'start'}>
 										<Icon as={Books} h={6} w={6} color='blue.500' />
 										<Text
 											as='body'
@@ -205,8 +205,8 @@ export default function Home() {
 										</Text>
 									</VStack>
 								</Box>
-								<Box borderWidth={0.5} boxShadow={'sm'} borderRadius={'lg'}>
-									<VStack p={5} spacing={2} align={'start'}>
+								<Box borderWidth={0.5} boxShadow={'xs'} borderRadius={'md'}>
+									<VStack p={4} spacing={2} align={'start'}>
 										<Icon as={Award} h={6} w={6} color='yellow.500' />
 										<Text
 											as='body'
@@ -240,8 +240,8 @@ export default function Home() {
 										</Text>
 									</VStack>
 								</Box>
-								<Box borderWidth={0.5} boxShadow={'sm'} borderRadius={'lg'}>
-									<VStack p={5} spacing={2} align={'start'}>
+								<Box borderWidth={0.5} boxShadow={'xs'} borderRadius={'md'}>
+									<VStack p={4} spacing={2} align={'start'}>
 										<Icon as={Chart} h={6} w={6} color='red.500' />
 										<Text
 											as='body'
@@ -279,8 +279,8 @@ export default function Home() {
 										</StatGroup>
 									</VStack>
 								</Box>
-								<Box borderWidth={0.5} boxShadow={'sm'} borderRadius={'lg'}>
-									<VStack p={5} spacing={2} align={'start'}>
+								<Box borderWidth={0.5} boxShadow={'xs'} borderRadius={'md'}>
+									<VStack p={4} spacing={2} align={'start'}>
 										<Icon as={Target} h={6} w={6} color='tomato' />
 										<Text
 											as='body'
@@ -315,8 +315,8 @@ export default function Home() {
 										</Text>
 									</VStack>
 								</Box>
-								<Box borderWidth={0.5} boxShadow={'sm'} borderRadius={'lg'}>
-									<VStack p={5} spacing={2} align={'start'}>
+								<Box borderWidth={0.5} boxShadow={'xs'} borderRadius={'md'}>
+									<VStack p={4} spacing={2} align={'start'}>
 										<Icon as={Plant} h={6} w={6} color='green.500' />
 										<Text
 											as='body'
