@@ -6,7 +6,7 @@ const Text = {
 		title: {
 			as: 'h1',
 			fontSize: '2xl',
-			fontWeight: '800',
+			fontWeight: 'extrabold',
 		},
 		heading2: {
 			as: 'h2',
@@ -26,13 +26,13 @@ const Text = {
 		body: {
 			as: 'p',
 			fontSize: 'md',
-			fontWeight: 'medium',
+			fontWeight: 'normal',
 		},
 		support: {
 			as: 'p',
 			fontSize: 'sm',
-			fontWeight: 'semibold',
-			color: 'textSecondary',
+			fontWeight: 'normal',
+			// color: 'textSecondary',
 		},
 	},
 	defaultProps: {
