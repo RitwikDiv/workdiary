@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
 	return (
 		<>
 			<Head>
-				<title>Terms & Conditions | WorkDiary</title>
+				<title>Terms & Conditions | Workdiary</title>
 				<meta
 					name='description'
 					content='Terms & Conditions for Workdiary.app'></meta>

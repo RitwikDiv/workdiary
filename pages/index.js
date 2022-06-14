@@ -76,7 +76,7 @@ export default function Home() {
 	return (
 		<div>
 			<Head>
-				<title>WorkDiary</title>
+				<title>Workdiary</title>
 				<meta name='description' content='Track your work properly' />
 				<meta
 					name='description'
@@ -94,7 +94,7 @@ export default function Home() {
 					centerContent
 					marginTop={20}
 					marginBottom={20}>
-					<VStack spacing={12}>
+					<VStack spacing={16}>
 						<VStack maxWidth={'container.lg'} align={'center'} spacing={4}>
 							<Image
 								src='images/home.png'
@@ -102,31 +102,27 @@ export default function Home() {
 								htmlHeight={'300px'}
 								htmlWidth={'300px'}></Image>
 							<Text
-								variant='body'
-								fontSize={'lg'}
-								fontWeight={'semibold'}
-								color={'textPrimary'}
+								fontWeight={'extrabold'}
+								fontSize={'2xl'}
+								variant={'title'}
 								textAlign={'center'}>
-								<Text as='span' color='purple.500'>
-									WorkDiary
-								</Text>{' '}
-								is a free app for students & professionals to{' '}
-								<Text as='span' color='textTeritiary'>
-									✔️ track their projects
+								Organizing your work-life just got{' '}
+								<Text as='span' color={'primary'}>
+									easier
 								</Text>
-								,{' '}
-								<Text as='span' color='textTeritiary'>
-									📈 monitor custom metrics
-								</Text>
-								, &{' '}
-								<Text as='span' color='textTeritiary'>
-									📝 receive personal guidance
-								</Text>{' '}
-								to succeed in the corporate world.
+							</Text>
+							<Text
+								variant='body'
+								maxWidth={'lg'}
+								lineHeight={'tall'}
+								textAlign={'center'}>
+								Workdiary is a free app for students and professionals to track
+								their projects, monitor custom metrics and receive professional
+								guidance.
 							</Text>
 							<Button
 								leftIcon={<Party color='orange' />}
-								variant={'outline'}
+								variant={'solid'}
 								onClick={(e) => {
 									router.push('/login');
 								}}>
@@ -186,12 +182,12 @@ export default function Home() {
 											align={'start'}>
 											Track your skill progression
 										</Text>
-										<Text variant='support' lineHeight={'tall'} align={'start'}>
+										<Text variant='support' align={'start'}>
 											Identify the hard and soft skills you employed to finish a
-											task and observe your progression over time
+											task and observe their progression
 										</Text>
 										<Divider></Divider>
-										<Text variant='support' lineHeight={'tall'} align={'start'}>
+										<Text variant='support' align={'start'}>
 											{skills.map((skillItem) => {
 												return (
 													<>
@@ -215,12 +211,12 @@ export default function Home() {
 											align={'start'}>
 											Celebrate all of your achievements
 										</Text>
-										<Text variant='support' lineHeight={'tall'} align={'start'}>
+										<Text variant='support' align={'start'}>
 											Celebrate accomplishments to increase motivation and
 											satisfaction in your role
 										</Text>
 										<Divider></Divider>
-										<Text variant='support' lineHeight={'tall'} align={'start'}>
+										<Text variant='support' align={'start'}>
 											<Tag size={'sm'} variant='subtle' colorScheme='yellow'>
 												<TagLeftIcon as={Briefcase} />
 												<TagLabel fontWeight={'semibold'}>Promotion</TagLabel>
@@ -250,7 +246,7 @@ export default function Home() {
 											align={'start'}>
 											View your productivity statistics
 										</Text>
-										<Text variant='support' lineHeight={'tall'} align={'start'}>
+										<Text variant='support' align={'start'}>
 											Unique metrics make it easy to view how you&apos;re doing
 											on a daily basis
 										</Text>
@@ -289,7 +285,7 @@ export default function Home() {
 											align={'start'}>
 											Quantify your progress with custom metrics
 										</Text>
-										<Text variant='support' lineHeight={'tall'} align={'start'}>
+										<Text variant='support' align={'start'}>
 											Create dynamic sliders for every task to actively keep
 											track of your progress
 										</Text>
@@ -309,7 +305,7 @@ export default function Home() {
 												<Box color='tomato' as={User} />
 											</SliderThumb>
 										</Slider>
-										<Text variant='support' lineHeight={'tall'} align={'start'}>
+										<Text variant='support' align={'start'}>
 											Conduct 15 User Interviews: {sliderValue.toLocaleString()}{' '}
 											/ 15
 										</Text>
@@ -325,7 +321,7 @@ export default function Home() {
 											align={'start'}>
 											Get feedback for personal growth
 										</Text>
-										<Text variant='support' lineHeight={'tall'} align={'start'}>
+										<Text variant='support' align={'start'}>
 											Step-by-step solutions for your specific needs
 										</Text>
 										{/* <Divider></Divider> */}
@@ -388,7 +384,7 @@ export default function Home() {
 									</AccordionButton>
 									<AccordionPanel>
 										<Text variant='body'>
-											We&apos;re building WorkDiary for ourselves, because we
+											We&apos;re building Workdiary for ourselves, because we
 											feel something is missing as we enter the workforce. We
 											need a holistic application that helps us fully capture
 											and communicate our work.{' '}
@@ -401,12 +397,12 @@ export default function Home() {
 								<AccordionItem p={1}>
 									<AccordionButton>
 										<Text variant={'body'} fontWeight={'extrabold'}>
-											Why do I need WorkDiary?
+											Why do I need Workdiary?
 										</Text>
 									</AccordionButton>
 									<AccordionPanel>
 										<Text variant='body'>
-											WorkDiary helps you stay on top of our tasks and perform
+											Workdiary helps you stay on top of our tasks and perform
 											better each day, making you feel more prepared and
 											confident at work. It also guides you to develop the
 											sustainable habit of reflecting and gaining feedback,

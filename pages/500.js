@@ -15,7 +15,7 @@ export default function ServerDown() {
 	return (
 		<>
 			<Head>
-				<title>404: Not Found | WorkDiary</title>
+				<title>404: Not Found | Workdiary</title>
 				<meta
 					name='description'
 					content='404 - Page Not Found Workdiary.app'></meta>

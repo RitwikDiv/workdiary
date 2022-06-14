@@ -14,6 +14,7 @@ export const theme = extendTheme({
 	semanticTokens: {
 		colors: {
 			primary: 'purple.500',
+			secondary: 'purple.600',
 			textPrimary: {
 				default: 'gray.700',
 				_dark: 'gray.200',

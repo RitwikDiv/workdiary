@@ -12,7 +12,6 @@ import {
 	Stack,
 	Text,
 	VStack,
-	Image,
 	useToast,
 	Link,
 } from '@chakra-ui/react';
@@ -101,7 +100,7 @@ export default function Login() {
 	return (
 		<>
 			<Head>
-				<title>Login | WorkDiary</title>
+				<title>Login | Workdiary</title>
 				<meta
 					name='description'
 					content='Login/Get Started with Workdiary.app'></meta>
@@ -113,11 +112,6 @@ export default function Login() {
 				<Center height={'100vh'} maxWidth={'container.sm'}>
 					<Stack spacing={4} width='350px'>
 						<VStack spacing={2}>
-							<Image
-								src='logo.svg'
-								alt='Workdiary Logo'
-								htmlHeight={'100px'}
-								htmlWidth='100px'></Image>
 							<Text variant={'title'}>👋 Welcome to Workdiary</Text>
 							<Text variant={'body'}>
 								You don&apos;t need a password. It&apos;s safer that way.

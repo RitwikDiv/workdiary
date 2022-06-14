@@ -10,7 +10,6 @@ import {
 	ListItem,
 	Text,
 	UnorderedList,
-	useColorModeValue,
 	VStack,
 } from '@chakra-ui/react';
 import Head from 'next/head';
@@ -21,7 +20,7 @@ export default function PrivacyPolicy() {
 	return (
 		<>
 			<Head>
-				<title>Privacy Policy | WorkDiary</title>
+				<title>Privacy Policy | Workdiary</title>
 				<meta
 					name='description'
 					content='Privacy Policy for Workdiary.app'></meta>
@@ -88,7 +87,7 @@ export default function PrivacyPolicy() {
 												<strong>Company</strong> (referred to as either
 												&quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot;
 												or &quot;Our&quot; in this Agreement) refers to
-												WorkDiary.
+												Workdiary.
 											</Text>
 										</ListItem>
 										<ListItem>
@@ -153,7 +152,7 @@ export default function PrivacyPolicy() {
 										</ListItem>
 										<ListItem>
 											<Text variant={'body'}>
-												<strong>Website</strong> refers to WorkDiary, accessible
+												<strong>Website</strong> refers to Workdiary, accessible
 												from{' '}
 												<Link
 													href='https://www.workdiary.app'

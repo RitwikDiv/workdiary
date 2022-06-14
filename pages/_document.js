@@ -7,7 +7,7 @@ export default function Document() {
 		<Html>
 			<Head>
 				<meta charSet='UTF-8' />
-				<link rel='icon' href='/favicon.ico' />
+				<link rel='icon' href='/logo.png' />
 			</Head>
 			<body>
 				<ColorModeScript initialColorMode={theme.config.initialColorMode} />
