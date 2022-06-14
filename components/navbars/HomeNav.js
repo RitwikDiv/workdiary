@@ -1,38 +1,34 @@
-import {
-	HStack,
-	Image,
-	Spacer,
-	Container,
-	Button,
-	Heading,
-} from '@chakra-ui/react';
+import { HStack, Spacer, Container, Button, Text, Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import DarkModeToggle from '../DarkModeToggle';
-import { RiRocket2Fill as Party } from 'react-icons/ri';
+import { CgLogIn as Login } from 'react-icons/cg';
+import { MdOutlineStickyNote2 as Sticky } from 'react-icons/md';
 
 export default function SimpleNav() {
 	const router = useRouter();
 	return (
 		<Container as='header' maxWidth={'container.xl'}>
 			<HStack
+				paddingTop={4}
 				width={'100%'}
 				justifyContent={'space-between'}
 				align='center'
 				spacing={2}>
-				<Image
-					src='logo.svg'
-					color='orange'
-					htmlHeight={'100px'}
-					htmlWidth={'100px'}
-					onClick={() => router.push('/')}
-					alt='Workdiary Logo'></Image>
+				<HStack cursor={'pointer'} onClick={() => router.push('/')}>
+					<Box backgroundColor='primary' rounded={'md'} p={1}>
+						<Sticky size={20} color={'white'}></Sticky>
+					</Box>
+					<Text fontSize={'2xl'} fontWeight='extrabold'>
+						workdiary
+					</Text>
+				</HStack>
 				<Spacer />
 				<DarkModeToggle></DarkModeToggle>
 				<Button
-					leftIcon={<Party />}
-					variant={'solid'}
+					rightIcon={<Login size={18} />}
+					variant={'outline'}
 					onClick={() => router.push('/login')}>
-					Get Started
+					Sign In
 				</Button>
 			</HStack>
 		</Container>
