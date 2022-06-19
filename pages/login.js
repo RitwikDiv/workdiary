@@ -23,10 +23,10 @@ import {
 	BsLinkedin as LinkedIn,
 } from 'react-icons/bs';
 import { FiAlertCircle, FiCheckCircle } from 'react-icons/fi';
-import { SiNotion as Notion } from 'react-icons/si';
 import validator from 'validator';
 import { supabase } from '../utils/backend/supabaseClient';
 import NextLink from 'next/link';
+import Logo from '../components/general/logos/Logo';
 
 export default function Login() {
 	const [email, setEmail] = useState('');
@@ -37,7 +37,6 @@ export default function Login() {
 	const oauthList = [
 		{ name: 'LinkedIn', icon: <LinkedIn color='#0e76a8' /> },
 		{ name: 'Github', icon: <Github /> },
-		{ name: 'Notion', icon: <Notion /> },
 	];
 
 	const handleLogin = async (email) => {
@@ -112,7 +111,7 @@ export default function Login() {
 				<Center height={'100vh'} maxWidth={'container.sm'}>
 					<Stack spacing={4} width='350px'>
 						<VStack spacing={2}>
-							<Text variant={'title'}>👋 Welcome to Workdiary</Text>
+							<Logo></Logo>
 							<Text variant={'body'}>
 								You don&apos;t need a password. It&apos;s safer that way.
 							</Text>
@@ -145,6 +144,7 @@ export default function Login() {
 							<Button
 								leftIcon={<BsStars color='orange' />}
 								variant={'solid'}
+								size='md'
 								isLoading={loading}
 								loadingText={'Sending ...'}
 								onClick={(e) => {
@@ -164,21 +164,32 @@ export default function Login() {
 								<Button
 									key={oauth.name}
 									variant='outline'
+									size='md'
 									onClick={() => oauthLogin(oauth.name.toLowerCase())}
 									leftIcon={oauth.icon}>
 									Continue with {oauth.name}
 								</Button>
 							))}
 						</VStack>
-						<HStack spacing={2} justifyContent='center'>
-							<NextLink href='/privacy' passHref>
-								<Link>Privacy Policy</Link>
-							</NextLink>
-							<Text>&bull;</Text>
-							<NextLink href='/terms' passHref>
-								<Link>Terms & Conditions</Link>
-							</NextLink>
-						</HStack>
+						<VStack spacing={2} justifyContent='center'>
+							<HStack spacing={2} justifyContent='center'>
+								<NextLink
+									href='https://workdiaryapp.notion.site/Workdiary-Privacy-Policy-c5e66fee071f404fb4298a312383e3bb'
+									passHref>
+									<Link isExternal size='sm'>
+										Privacy Policy
+									</Link>
+								</NextLink>
+								<Text>&bull;</Text>
+								<NextLink
+									href='https://workdiaryapp.notion.site/Workdiary-Terms-Conditions-a71ac0817cb64f0bb1dc7594333efe70'
+									passHref>
+									<Link isExternal size='sm'>
+										Terms & Conditions
+									</Link>
+								</NextLink>
+							</HStack>
+						</VStack>
 					</Stack>
 				</Center>
 			</Container>

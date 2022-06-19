@@ -7,28 +7,60 @@ const Button = {
 	variants: {
 		outline: {
 			default: {
-				width: '2px',
+				width: '1px',
 				color: 'textSecondary',
 			},
 			_dark: {
-				color: 'textSecondary',
+				default: {
+					color: 'textSecondary',
+				},
 			},
-		},
-		menu: {
-			color: 'textPrimary',
-			fontWeight: 'semibold',
-			fontSize: 'sm',
 		},
 		solid: {
 			bg: 'primary',
-			color: 'gray.100',
+			color: 'textInverse',
 			_hover: {
 				bg: 'secondary',
 			},
 		},
+		danger: {
+			borderWidth: '1px',
+			borderColor: 'danger',
+			color: 'danger',
+			_hover: {
+				backgroundColor: 'red.100',
+				color: 'red.700',
+				_dark: { backgroundColor: 'red.900', color: 'red.100' },
+			},
+			leftIconColor: 'danger',
+		},
+		success: {
+			borderWidth: '1px',
+			borderColor: 'success',
+			color: 'success',
+			_hover: {
+				backgroundColor: 'green.100',
+				color: 'green.700',
+				_dark: { backgroundColor: 'green.900', color: 'green.100' },
+			},
+			leftIconColor: 'success',
+		},
+		add: {
+			borderWidth: '1px',
+			borderColor: 'primary',
+			color: 'primary',
+			borderStyle: 'dotted',
+			_hover: {
+				backgroundColor: 'purple.100',
+				color: 'purple.700',
+				_dark: { backgroundColor: 'purple.900', color: 'purple.100' },
+			},
+			leftIconColor: 'primary',
+		},
 	},
 	defaultProps: {
 		variant: 'outline',
+		size: 'sm',
 	},
 };
 

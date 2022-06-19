@@ -53,9 +53,9 @@ import {
 import { FaMinus as Minus, FaUserCircle as User } from 'react-icons/fa';
 import { RiPlantFill as Plant } from 'react-icons/ri';
 import { SiTarget as Target } from 'react-icons/si';
-import SimpleFooter from '../components/footers/SimpleFooter';
-import HomeNav from '../components/navbars/HomeNav';
-import SkillCell from '../components/skill/SkillCell';
+import SimpleFooter from '../components/general/footers/SimpleFooter';
+import HomeNav from '../components/general/navbars/HomeNav';
+import SkillCell from '../components/index/skill/SkillCell';
 
 export default function Home() {
 	const router = useRouter();
@@ -105,11 +105,10 @@ export default function Home() {
 								fontWeight={'extrabold'}
 								fontSize={'2xl'}
 								variant={'title'}
+								bgColor={'purple.50'}
+								_dark={{ bgColor: 'purple.800' }}
 								textAlign={'center'}>
-								Organizing your work-life just got{' '}
-								<Text as='span' color={'primary'}>
-									easier
-								</Text>
+								Organizing your work-life made simple
 							</Text>
 							<Text
 								variant='body'
@@ -123,10 +122,11 @@ export default function Home() {
 							<Button
 								leftIcon={<Party color='orange' />}
 								variant={'solid'}
+								size={'md'}
 								onClick={(e) => {
 									router.push('/login');
 								}}>
-								Get started for free!
+								Get started for free
 							</Button>
 						</VStack>
 						<Divider></Divider>

@@ -8,7 +8,7 @@ export default function DarkModeToggle() {
 	return (
 		<Tooltip label='Toggle theme' aria-label='A tooltip'>
 			<IconButton
-				size={'md'}
+				size={'sm'}
 				variant='ghost'
 				aria-label='Toggle Mode'
 				onClick={toggleColorMode}

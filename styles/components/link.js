@@ -18,6 +18,14 @@ const Link = {
 				textDecoration: 'underline',
 			},
 		},
+		accountLink: {
+			color: 'textSecondary',
+			fontWeight: 'semibold',
+			textDecoration: 'none',
+			_hover: {
+				color: 'textPrimary',
+			},
+		},
 	},
 	sizes: {
 		sm: {

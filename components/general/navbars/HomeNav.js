@@ -1,10 +1,10 @@
-import { HStack, Spacer, Container, Button, Text, Box } from '@chakra-ui/react';
+import { Button, Container, HStack, Spacer } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import DarkModeToggle from '../DarkModeToggle';
 import { CgLogIn as Login } from 'react-icons/cg';
-import { MdOutlineStickyNote2 as Sticky } from 'react-icons/md';
+import DarkModeToggle from '../navbars/utilities/DarkModeToggle';
+import Logo from '../logos/Logo';
 
-export default function SimpleNav() {
+export default function HomeNav() {
 	const router = useRouter();
 	return (
 		<Container as='header' maxWidth={'container.xl'}>
@@ -14,19 +14,13 @@ export default function SimpleNav() {
 				justifyContent={'space-between'}
 				align='center'
 				spacing={2}>
-				<HStack cursor={'pointer'} onClick={() => router.push('/')}>
-					<Box backgroundColor='primary' rounded={'md'} p={1}>
-						<Sticky size={20} color={'white'}></Sticky>
-					</Box>
-					<Text fontSize={'2xl'} fontWeight='extrabold'>
-						workdiary
-					</Text>
-				</HStack>
+				<Logo></Logo>
 				<Spacer />
 				<DarkModeToggle></DarkModeToggle>
 				<Button
 					rightIcon={<Login size={18} />}
 					variant={'outline'}
+					size={'md'}
 					onClick={() => router.push('/login')}>
 					Sign In
 				</Button>

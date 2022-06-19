@@ -15,6 +15,8 @@ export const theme = extendTheme({
 		colors: {
 			primary: 'purple.500',
 			secondary: 'purple.600',
+			danger: 'red.500',
+			success: 'green.500',
 			textPrimary: {
 				default: 'gray.700',
 				_dark: 'gray.200',
@@ -26,6 +28,9 @@ export const theme = extendTheme({
 			textTeritiary: {
 				default: 'gray.500',
 				_dark: 'gray.400',
+			},
+			textInverse: {
+				default: 'gray.50',
 			},
 			sbBackground: {
 				default: 'white',

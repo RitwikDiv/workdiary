@@ -5,8 +5,14 @@ const Text = {
 	variants: {
 		title: {
 			as: 'h1',
-			fontSize: '2xl',
+			fontSize: 'xl',
 			fontWeight: 'extrabold',
+		},
+		subtitle: {
+			as: 'p',
+			fontSize: 'sm',
+			fontWeight: 'semibold',
+			color: 'textTeritiary',
 		},
 		heading2: {
 			as: 'h2',
