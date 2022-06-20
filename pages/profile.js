@@ -28,11 +28,7 @@ import {
 	CgTrash as Trash,
 	CgUndo as Undo,
 } from 'react-icons/cg';
-import {
-	FiEdit as Edit,
-	FiEdit3 as Edit2,
-	FiSave as Save,
-} from 'react-icons/fi';
+import { FiEdit as Edit, FiSave as Save } from 'react-icons/fi';
 import LinkAddModal from '../components/account/modals/LinkAddModal';
 import AccountNav from '../components/general/navbars/AccountNav';
 
@@ -82,15 +78,11 @@ export default function Profile() {
 			</Head>
 			<AccountNav />
 			<Container
-				borderWidth={'1px'}
-				rounded={'md'}
-				padding={4}
-				width={'98%'}
 				maxWidth={'container.xl'}
 				minWidth={'container.xs'}
-				marginTop={10}
+				marginTop={5}
 				marginBottom={10}>
-				<VStack spacing={4}>
+				<VStack spacing={4} borderWidth={'1px'} rounded={'md'} padding={4}>
 					<Stack
 						spacing={4}
 						width={'100%'}

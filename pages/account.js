@@ -24,15 +24,11 @@ export default function Account() {
 			</Head>
 			<AccountNav />
 			<Container
-				borderWidth={'1px'}
-				rounded={'md'}
-				padding={4}
-				width={'98%'}
 				maxWidth={'container.xl'}
 				minWidth={'container.xs'}
-				marginTop={10}
+				marginTop={5}
 				marginBottom={10}>
-				<VStack spacing={4}>
+				<VStack spacing={4} borderWidth={'1px'} padding={4} rounded='md'>
 					<VStack
 						justifyContent={'start'}
 						align={'start'}
