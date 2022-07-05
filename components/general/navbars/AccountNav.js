@@ -1,8 +1,6 @@
 import {
-	Button,
 	Container,
 	HStack,
-	Link,
 	IconButton,
 	Menu,
 	MenuButton,
@@ -14,6 +12,7 @@ import {
 	Avatar,
 	Tooltip,
 	Divider,
+	Box,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import {
@@ -31,15 +30,14 @@ import Logo from '../logos/Logo';
 export default function SimpleNav() {
 	const router = useRouter();
 	return (
-		<>
+		<Box borderBottomWidth={'1px'}>
 			<Container
-				marginTop={5}
-				marginBottom={5}
+				marginTop={4}
+				marginBottom={4}
 				as='header'
-				maxWidth={'container.xl'}
-				width={'100%'}>
+				maxWidth={'container.xl'}>
 				<HStack align='center' spacing={2}>
-					<Logo href='/app'></Logo>
+					<Logo href='/home'></Logo>
 					<Spacer />
 					<DarkModeToggle></DarkModeToggle>
 					<Menu>
@@ -129,7 +127,6 @@ export default function SimpleNav() {
 					</Menu>
 				</HStack>
 			</Container>
-			<Divider shadow={'sm'}></Divider>
-		</>
+		</Box>
 	);
 }
