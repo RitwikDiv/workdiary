@@ -39,7 +39,7 @@ export default function Account() {
 					<Divider></Divider>
 					<Grid width={'100%'} templateColumns={'repeat(12, 1fr)'} gap={4}>
 						<GridItem colSpan={useBreakpointValue({ base: 12, sm: 12, md: 4 })}>
-							<VStack spacing={1} alignItems={'start'}>
+							<VStack spacing={2} alignItems={'start'}>
 								<Text variant='heading4' color={'primary'}>
 									Manage your account
 								</Text>

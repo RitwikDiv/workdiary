@@ -49,13 +49,21 @@ const Button = {
 			borderWidth: '1px',
 			borderColor: 'primary',
 			color: 'primary',
-			borderStyle: 'dotted',
 			_hover: {
 				backgroundColor: 'purple.100',
-				color: 'purple.700',
 				_dark: { backgroundColor: 'purple.900', color: 'purple.100' },
 			},
 			leftIconColor: 'primary',
+		},
+		addAchievement: {
+			borderWidth: '1px',
+			borderColor: 'orange.500',
+			color: 'orange.500',
+			_hover: {
+				backgroundColor: 'orange.100',
+				_dark: { backgroundColor: 'orange.900', color: 'orange.100' },
+			},
+			leftIconColor: 'orange.500',
 		},
 	},
 	defaultProps: {
