@@ -15,7 +15,7 @@
 		"@fontsource/dm-sans": "^4.5.2",
 		"@supabase/supabase-js": "^1.30.4",
 		"framer-motion": "^6.2.6",
-		"moment": "^2.29.3",
+		"moment": "^2.29.4",
 		"next": "12.1.0",
 		"npm": "^8.5.4",
 		"react": "17.0.2",
