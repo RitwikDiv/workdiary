@@ -191,6 +191,7 @@ export default function Home() {
 												<>
 													<SkillCell
 														name={skillItem.name}
+														key={skillItem.name}
 														selected={skillItem.selected}
 													/>{' '}
 												</>

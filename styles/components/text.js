@@ -29,6 +29,11 @@ const Text = {
 			fontSize: 'md',
 			fontWeight: 'semibold',
 		},
+		heading5: {
+			as: 'h5',
+			fontSize: 'md',
+			fontWeight: 'semibold',
+		},
 		body: {
 			as: 'p',
 			fontSize: 'md',
@@ -37,8 +42,7 @@ const Text = {
 		support: {
 			as: 'p',
 			fontSize: 'sm',
-			fontWeight: 'normal',
-			// color: 'textSecondary',
+			fontWeight: 'medium',
 		},
 	},
 	defaultProps: {

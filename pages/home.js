@@ -11,7 +11,7 @@ import AccountNav from '../components/general/navbars/AccountNav';
 import ExpandedSideNav from '../components/general/sidebar/ExpandedSideNav';
 import MenuSideNav from '../components/general/sidebar/MenuSideNav';
 import ShareBar from '../components/general/sidebar/ShareBar';
-import AchievementTracker from '../components/main/AchievementTracker';
+import AchievementTracker from '../components/achivements/AchievementTracker';
 import ProfGuidance from '../components/main/ProfGuidance';
 import ProjectTracker from '../components/main/ProjectTracker';
 import Error from '../components/main/Error';
@@ -55,10 +55,10 @@ export default function Home() {
 							md: '30%',
 							lg: '22%',
 						})}>
-						<Show below='md'>
+						<Show below='lg'>
 							<MenuSideNav setOption={setMenuOption}></MenuSideNav>
 						</Show>
-						<Hide below='md'>
+						<Hide below='lg'>
 							<ExpandedSideNav setOption={setMenuOption}></ExpandedSideNav>
 						</Hide>
 						<ShareBar></ShareBar>
@@ -67,7 +67,7 @@ export default function Home() {
 						flex='1'
 						borderWidth={'1px'}
 						rounded={'md'}
-						height={'85vh'}
+						// height={'85vh'}
 						padding={4}
 						spacing={4}>
 						{renderMain(menuOption)}
